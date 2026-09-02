@@ -3,66 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f2419" />
   <title>Indian Chicken Shop | Fresh Chicken, Fish & Mutton</title>
-  <meta name="description" content="Indian Chicken Shop in Budh Vihar, Ghaziabad. Fresh chicken, fish and mutton. Call or WhatsApp to order." />
-  <meta name="theme-color" content="#1f7a4d" />
+  <meta name="description" content="Indian Chicken Shop — fresh chicken, fish and mutton in Budh Vihar, Ghaziabad. Since 2010. Call or WhatsApp to order." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="topbar">Fresh cuts • Quality you can trust • Serving since 2010</div>
+
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="#home">Indian Chicken Shop</a>
+      <a class="brand" href="#home"><span class="brand-mark">ICS</span><span>Indian Chicken Shop<small>Since 2010</small></span></a>
       <nav>
         <a href="#products">Products</a>
-        <a href="#about">About</a>
+        <a href="#why-us">Why Us</a>
         <a href="#contact">Contact</a>
       </nav>
+      <a class="nav-call" href="tel:+918512875859">☎ 85128 75859</a>
     </div>
   </header>
 
   <main>
     <section id="home" class="hero">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-overlay"></div>
       <div class="container hero-content">
-        <p class="eyebrow">TRUSTED SINCE 2010</p>
-        <h1>Fresh Chicken, Fish & Mutton</h1>
-        <p class="hero-text">Fresh quality meat for your family, daily meals, parties and special occasions.</p>
-        <div class="buttons">
-          <a class="btn primary" href="tel:+918512875859">Call Now</a>
-          <a class="btn secondary" href="https://wa.me/918512875859?text=Assalamualaikum%2C%20I%20want%20to%20place%20an%20order%20from%20Indian%20Chicken%20Shop.">WhatsApp Order</a>
+        <div class="hero-copy">
+          <div class="pill">● FRESH • CLEAN • QUALITY</div>
+          <h1>Fresh meat.<br /><em>Better meals.</em></h1>
+          <p>Chicken, fish & mutton — freshly sourced and prepared for your everyday meals, family dinners and special occasions.</p>
+          <div class="buttons">
+            <a class="btn primary" href="https://wa.me/918512875859?text=Assalamualaikum%2C%20I%20want%20to%20place%20an%20order%20from%20Indian%20Chicken%20Shop.">Order on WhatsApp <span>↗</span></a>
+            <a class="btn ghost" href="tel:+918512875859">Call 85128 75859</a>
+          </div>
+          <div class="trust-row"><span>✓ Fresh stock</span><span>✓ Custom cuts</span><span>✓ Local & trusted</span></div>
         </div>
       </div>
     </section>
 
-    <section id="products" class="section">
+    <section id="products" class="section products-section">
       <div class="container">
-        <p class="eyebrow">OUR PRODUCTS</p>
-        <h2>Fresh & Quality</h2>
-        <div class="cards">
-          <article class="card"><div class="icon">🐔</div><h3>Chicken</h3><p>Fresh chicken prepared according to your requirement.</p></article>
-          <article class="card"><div class="icon">🐟</div><h3>Fish</h3><p>Fresh fish for everyday cooking and special meals.</p></article>
-          <article class="card"><div class="icon">🐐</div><h3>Mutton</h3><p>Quality mutton for family meals and occasions.</p></article>
+        <div class="section-head"><div><div class="eyebrow">WHAT WE OFFER</div><h2>Shop fresh favourites</h2></div><p>Choose your meat and tell us how you want it cut.</p></div>
+        <div class="product-grid">
+          <article class="product-card chicken"><img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=1000&q=85" alt="Fresh chicken" loading="lazy" /><div class="product-info"><span>01</span><h3>Chicken</h3><p>Fresh chicken for curry, biryani, grill & everyday cooking.</p><a href="https://wa.me/918512875859?text=I%20want%20to%20order%20fresh%20chicken%20from%20Indian%20Chicken%20Shop.">Order chicken →</a></div></article>
+          <article class="product-card fish"><img src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?auto=format&fit=crop&w=1000&q=85" alt="Fresh fish" loading="lazy" /><div class="product-info"><span>02</span><h3>Fish</h3><p>Fresh fish, cleaned and cut according to your requirement.</p><a href="https://wa.me/918512875859?text=I%20want%20to%20order%20fresh%20fish%20from%20Indian%20Chicken%20Shop.">Order fish →</a></div></article>
+          <article class="product-card mutton"><img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=1000&q=85" alt="Fresh mutton" loading="lazy" /><div class="product-info"><span>03</span><h3>Mutton</h3><p>Quality mutton for hearty curries, biryani and occasions.</p><a href="https://wa.me/918512875859?text=I%20want%20to%20order%20fresh%20mutton%20from%20Indian%20Chicken%20Shop.">Order mutton →</a></div></article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section light">
-      <div class="container about">
-        <div><p class="eyebrow">ABOUT US</p><h2>Serving our customers with trust</h2></div>
-        <div><p>Indian Chicken Shop has been serving fresh meat since 2010. We focus on freshness, cleanliness and customer satisfaction.</p><p class="owner">Haji Shekh Elias</p></div>
+    <section id="why-us" class="why-section">
+      <div class="container why-grid">
+        <div class="why-copy"><div class="eyebrow">WHY INDIAN CHICKEN SHOP</div><h2>A neighbourhood shop built on <em>trust.</em></h2><p>For more than a decade, we have focused on what matters: fresh meat, clean preparation and honest service.</p><div class="owner-line"><span class="owner-avatar">HE</span><div><strong>Haji Shekh Elias</strong><small>Serving customers since 2010</small></div></div></div>
+        <div class="features"><div class="feature"><b>01</b><h3>Fresh stock</h3><p>Fresh chicken, fish and mutton for your kitchen.</p></div><div class="feature"><b>02</b><h3>Your cut, your way</h3><p>Tell us your preferred cut and preparation.</p></div><div class="feature"><b>03</b><h3>Easy ordering</h3><p>Call or WhatsApp us before you visit.</p></div><div class="feature"><b>04</b><h3>Since 2010</h3><p>A local name you can come back to.</p></div></div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="container">
-        <p class="eyebrow">VISIT OR ORDER</p>
-        <h2>Indian Chicken Shop</h2>
-        <p>25 Futta Road, Budh Vihar, On Road,<br />Near Gali No. 30 & Madina Pharmacy,<br />Ghaziabad, Uttar Pradesh – 201301</p>
-        <div class="phone-links"><a href="tel:+918512875859">8512875859</a><a href="tel:+918826070150">8826070150</a></div>
-        <div class="buttons center"><a class="btn primary" href="tel:+918512875859">Call Now</a><a class="btn secondary" href="https://wa.me/918512875859">WhatsApp</a></div>
+    <section id="contact" class="contact-section">
+      <div class="container contact-card">
+        <div><div class="eyebrow light-eyebrow">COME BY OR ORDER</div><h2>Fresh meat is just a call away.</h2><p>25 Futta Road, Budh Vihar, On Road,<br />Near Gali No. 30 & Madina Pharmacy,<br />Ghaziabad, Uttar Pradesh – 201301</p></div>
+        <div class="contact-actions"><a class="contact-phone" href="tel:+918512875859">85128 75859</a><a class="btn yellow" href="https://wa.me/918512875859">WhatsApp us ↗</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=25%20Futta%20Road%20Budh%20Vihar%20Ghaziabad%20Uttar%20Pradesh%20201301">Open in Google Maps →</a></div>
       </div>
     </section>
   </main>
 
-  <footer><div class="container">© 2026 Indian Chicken Shop · Fresh Chicken, Fish & Mutton</div></footer>
+  <footer><div class="container footer-inner"><div><strong>Indian Chicken Shop</strong><span>Fresh Chicken • Fish • Mutton</span></div><div>© 2026 Indian Chicken Shop</div></div></footer>
+  <div class="mobile-bar"><a href="tel:+918512875859">☎ Call</a><a href="https://wa.me/918512875859">💬 WhatsApp</a></div>
 </body>
 </html>
