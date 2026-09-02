@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inamkhankhan050-maker.github.io/Indian-Chicken-Shop/sitemap.xml
