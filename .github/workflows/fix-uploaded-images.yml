@@ -1,0 +1,33 @@
+name: Apply uploaded product images
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix-images:
+    if: ${{ hashFiles('.image-fix-pending') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace product image URLs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+          s = s.replace('https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=1000&q=88\" alt=\"Chicken wings', 'https://images-us-prod.cms.commerce.dynamics.com/cms/api/khxqfxnnst/imageFileData/search?fileName=%2FProducts%2F7666571_000_001.png\" alt=\"Chicken wings')
+          s = s.replace('https://www.fremeazo.com/assets/uploads/product/8e4af0127f11908d4d5bb93020fb2055.webp\" alt=\"Roopchand fish', 'https://7ninemilkmeat.com/storage/app/public/product/2025-03-23-67dfab0147b36.png\" alt=\"Roopchand fish')
+          p.write_text(s)
+          PY
+          rm .image-fix-pending
+      - name: Commit fixes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html .image-fix-pending
+          git commit -m "Fix chicken wings and Roopchand images"
+          git push
