@@ -1,10 +1,10 @@
 @import url("https://raw.githubusercontent.com/inamkhankhan050-maker/Indian-Chicken-Shop/606b5cf3e0988aaaf9e959ffebafdbe955516d32/style.css");
 
-/* FIXED PRODUCT IMAGES */
-.product-card:nth-child(2) .product-photo img{content:url("https://arysdeli.com/cdn/shop/files/chicken-drumsticks.jpg");object-fit:cover}
+/* VERIFIED IMAGE FIXES */
+.product-card:nth-child(2) .product-photo img{content:url("https://images.unsplash.com/photo-1624364543842-b0472614eb68?auto=format&fit=crop&fm=jpg&q=88&w=1200");object-fit:cover}
 .product-card:nth-child(3) .product-photo img{content:url("https://primecutny.com/cdn/shop/files/Wings.jpg?v=1740426370&width=1920");object-fit:cover}
 
-/* COMPACT KABAB SECTION — same card style as Chicken */
+/* COMPACT KABAB SECTION */
 .kabab-section{padding:68px 0;background:#f8f6ef}
 .kabab-section .section-head{margin-bottom:24px}
 .kabab-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
@@ -19,7 +19,7 @@
 .kabab-card p{font-size:.72rem;color:#718078;min-height:40px;margin-bottom:12px}
 .kabab-card a{color:#08785a;text-decoration:none;font-size:.67rem;font-weight:900;border:1px solid #cfe1d5;border-radius:9px;padding:9px 11px;display:inline-block}
 
-/* REAL SEEKH KABAB — replaces the incorrect samosa image */
+/* REAL CHICKEN SEEKH KABAB — NOT SAMOSA */
 .kabab-card:first-child .kabab-photo img{content:url("https://spicecravings.com/wp-content/uploads/2021/03/Chicken-Seekh-Kebab-Featured-1-1024x1024.jpg");object-fit:cover}
 
 @media(max-width:1050px){.kabab-grid{grid-template-columns:repeat(2,1fr)}}
