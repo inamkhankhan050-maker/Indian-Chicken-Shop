@@ -1,25 +1,27 @@
 @import url("https://raw.githubusercontent.com/inamkhankhan050-maker/Indian-Chicken-Shop/606b5cf3e0988aaaf9e959ffebafdbe955516d32/style.css");
 
-/* Product image corrections */
-.product-card:nth-child(2) .product-photo img{content:url("https://commons.wikimedia.org/wiki/Special:Redirect/file/HK%20food%20raw%20chicken%20legs%20February%202020%20SS2%2001.jpg");object-fit:cover}
-.product-card:nth-child(3) .product-photo img{content:url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Uncooked%20chicken%20wings%20with%20sauce.jpg");object-fit:cover}
+/* FIXED PRODUCT IMAGES */
+.product-card:nth-child(2) .product-photo img{content:url("https://arysdeli.com/cdn/shop/files/chicken-drumsticks.jpg");object-fit:cover}
+.product-card:nth-child(3) .product-photo img{content:url("https://primecutny.com/cdn/shop/files/Wings.jpg?v=1740426370&width=1920");object-fit:cover}
 
-/* Compact Kabab section — same clean card feel as Chicken */
-.kabab-section{padding:58px 0;background:#f8f6ef}
-.kabab-section .section-head{margin-bottom:22px}
-.kabab-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.kabab-card{background:#fff;border:1px solid #dfe5df;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px #2349380d;transition:.22s;display:flex;flex-direction:column}
-.kabab-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px #23493818}
-.kabab-photo{height:175px;position:relative;overflow:hidden;background:#e5eee8}
+/* COMPACT KABAB SECTION — same card style as Chicken */
+.kabab-section{padding:68px 0;background:#f8f6ef}
+.kabab-section .section-head{margin-bottom:24px}
+.kabab-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.kabab-card{background:#fff;border:1px solid #dfe5df;border-radius:20px;overflow:hidden;box-shadow:0 12px 32px #2349380d;transition:.22s;display:flex;flex-direction:column}
+.kabab-card:hover{transform:translateY(-5px);box-shadow:0 22px 45px #23493818}
+.kabab-photo{height:210px;position:relative;overflow:hidden;background:#e5eee8}
 .kabab-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}
 .kabab-card:hover .kabab-photo img{transform:scale(1.05)}
-.kabab-photo span{position:absolute;left:11px;top:11px;background:#08785a;color:#fff;border-radius:7px;padding:6px 8px;font-size:.5rem;font-weight:900;letter-spacing:1px}
-.kabab-card>div:last-child{padding:15px 16px 16px}
-.kabab-card h3{font-family:Manrope;font-size:1rem;color:#173e31;margin-bottom:4px}
-.kabab-card p{font-size:.67rem;color:#718078;min-height:38px;margin-bottom:11px}
-.kabab-card a{color:#08785a;text-decoration:none;font-size:.65rem;font-weight:900;border:1px solid #cfe1d5;border-radius:8px;padding:8px 10px;display:inline-block}
-/* Correct the seekh-kabab image specifically; the old image was a samosa. */
-.kabab-card:first-child .kabab-photo img{content:url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Chicken%20Seekh%20Kabab.jpg");object-fit:cover}
+.kabab-photo span{position:absolute;left:13px;top:13px;background:#08785a;color:#fff;border-radius:7px;padding:6px 9px;font-size:.54rem;font-weight:900;letter-spacing:1px}
+.kabab-card>div:last-child{padding:16px 18px 18px}
+.kabab-card h3{font-family:Manrope;font-size:1.08rem;color:#173e31;margin-bottom:5px}
+.kabab-card p{font-size:.72rem;color:#718078;min-height:40px;margin-bottom:12px}
+.kabab-card a{color:#08785a;text-decoration:none;font-size:.67rem;font-weight:900;border:1px solid #cfe1d5;border-radius:9px;padding:9px 11px;display:inline-block}
+
+/* REAL SEEKH KABAB — replaces the incorrect samosa image */
+.kabab-card:first-child .kabab-photo img{content:url("https://spicecravings.com/wp-content/uploads/2021/03/Chicken-Seekh-Kebab-Featured-1-1024x1024.jpg");object-fit:cover}
 
 @media(max-width:1050px){.kabab-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){.kabab-section{padding:48px 0}.kabab-grid{grid-template-columns:repeat(2,1fr);gap:12px}.kabab-photo{height:145px}.kabab-card>div:last-child{padding:12px}.kabab-card h3{font-size:.9rem}.kabab-card p{font-size:.63rem;min-height:44px}.kabab-card a{font-size:.6rem;padding:7px 8px}}
+@media(max-width:760px){.kabab-section{padding:55px 0}.kabab-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.kabab-photo{height:150px}.kabab-card>div:last-child{padding:12px}.kabab-card h3{font-size:.88rem}.kabab-card p{font-size:.62rem;min-height:42px}.kabab-card a{font-size:.59rem;padding:7px 8px}}
+@media(max-width:520px){.kabab-grid{grid-template-columns:1fr}.kabab-photo{height:205px}}
