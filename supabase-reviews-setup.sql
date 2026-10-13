@@ -12,6 +12,10 @@ create table if not exists public.reviews (
 
 alter table public.reviews enable row level security;
 
+-- Grant only the operations used by the website; RLS policies still apply.
+grant select, insert on table public.reviews to anon, authenticated;
+grant usage, select on sequence public.reviews_id_seq to anon, authenticated;
+
 -- Public visitors can read approved reviews only.
 drop policy if exists "Anyone can read approved reviews" on public.reviews;
 create policy "Anyone can read approved reviews"
