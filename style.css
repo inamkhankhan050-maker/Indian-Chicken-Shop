@@ -51,3 +51,22 @@
 .feedback-form>small{font-size:.7rem;color:#748278;line-height:1.5}
 .secondary-phone{display:block;margin-top:13px}
 @media(max-width:760px){.feedback-grid{grid-template-columns:1fr;gap:24px}.feedback-form{padding:20px}.topbar-inner{flex-wrap:wrap;gap:8px}.topbar-inner>a{font-size:.72rem}.mobile-bar{grid-template-columns:1fr 1fr 1fr}.mobile-bar a{font-size:.72rem}}
+
+/* On-site reviews and moderation-ready feedback */
+.review-summary{display:flex;flex-direction:column;gap:5px;margin-top:26px;padding:17px 18px;background:#fff;border:1px solid #dce7dd;border-radius:14px;max-width:300px}
+.review-summary strong{color:#173e31;font-size:1.05rem}.review-summary span{font-size:.78rem;color:#6b7d70}
+.feedback-status{font-size:.76rem!important;color:#60756b!important;line-height:1.55;margin:4px 0 0}
+.feedback-status.status-error{color:#a33224!important}.feedback-submit:disabled{opacity:.65;cursor:wait}
+.public-reviews{margin-top:48px}.reviews-heading{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}
+.reviews-heading h3{font-family:Manrope,Arial,sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);color:#173e31;margin:8px 0 0}
+.reviews-heading>span{font-size:.72rem;color:#66796d;background:#e7efe5;border-radius:999px;padding:8px 12px}
+.reviews-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.review-card{background:#fff;border:1px solid #dce7dd;border-radius:16px;padding:20px;box-shadow:0 8px 22px #23493808;min-width:0}
+.review-card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.review-card-top strong{color:#214936;font-size:.9rem}
+.review-stars{color:#d49b29;letter-spacing:1px;white-space:nowrap;font-size:.9rem}
+.review-product{display:block;color:#718076;margin-top:9px;font-size:.72rem}
+.review-card p{color:#45594d;font-size:.85rem;line-height:1.7;overflow-wrap:anywhere;white-space:pre-wrap}
+.review-card time{color:#87948a;font-size:.68rem}
+.reviews-empty{padding:22px;background:#fff;border:1px dashed #cdddcf;border-radius:14px;color:#6c7c70;font-size:.86rem;grid-column:1/-1}
+@media(max-width:760px){.reviews-list{grid-template-columns:1fr 1fr}.reviews-heading{align-items:start;flex-direction:column}}
+@media(max-width:520px){.reviews-list{grid-template-columns:1fr}.review-summary{max-width:none}}
