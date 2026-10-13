@@ -19,3 +19,17 @@
 .kabab-menu-note{margin-top:16px;color:#77857d;font-size:.72rem}
 @media(max-width:850px){.kabab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kabab-menu-wrap{padding:18px}.kabab-menu-list{column-gap:18px}}
 @media(max-width:560px){.kabab-grid{grid-template-columns:1fr 1fr;gap:11px}.kabab-photo{height:155px}.kabab-card>div:last-child{padding:12px}.kabab-card-title{display:block}.kabab-price{display:inline-block;margin-top:7px}.kabab-card h3{font-size:.95rem}.kabab-card p{font-size:.68rem;min-height:52px}.kabab-card a{font-size:.61rem;padding:8px}.kabab-menu-wrap{padding:14px}.kabab-menu-head{display:block}.kabab-menu-head>span{display:inline-block;margin-top:8px}.kabab-menu-list{grid-template-columns:1fr}.kabab-menu-row{font-size:.76rem}}
+
+/* Original uploaded kabab photos sprite */
+.kabab-photo img.kabab-sprite{width:300%;height:300%;max-width:none;position:absolute;left:0;top:0;object-fit:fill;transition:none}
+.kabab-photo img.sprite-cell-0{left:0;top:0}
+.kabab-photo img.sprite-cell-1{left:-100%;top:0}
+.kabab-photo img.sprite-cell-2{left:-200%;top:0}
+.kabab-photo img.sprite-cell-3{left:0;top:-100%}
+.kabab-photo img.sprite-cell-4{left:-100%;top:-100%}
+.kabab-photo img.sprite-cell-5{left:-200%;top:-100%}
+.kabab-photo img.sprite-cell-6{left:0;top:-200%}
+.kabab-photo img.sprite-cell-7{left:-100%;top:-200%}
+.kabab-photo img.sprite-cell-8{left:-200%;top:-200%}
+.kabab-card .kabab-call{background:#f4f8f4;color:#274f3f;margin-left:6px}
+.delivery-note{margin:0 0 18px;padding:13px 16px;border:1px solid #cfe3d3;background:#edf6ed;border-radius:12px;color:#1d6048;font-weight:800;font-size:.82rem}
