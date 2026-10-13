@@ -33,3 +33,21 @@
 .kabab-photo img.sprite-cell-8{left:-200%;top:-200%}
 .kabab-card .kabab-call{background:#f4f8f4;color:#274f3f;margin-left:6px}
 .delivery-note{margin:0 0 18px;padding:13px 16px;border:1px solid #cfe3d3;background:#edf6ed;border-radius:12px;color:#1d6048;font-weight:800;font-size:.82rem}
+
+/* Customer feedback */
+.feedback-section{background:#f4f7f1}
+.feedback-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);gap:44px;align-items:start}
+.feedback-copy h2{font-family:Manrope,Arial,sans-serif;font-size:clamp(2rem,4vw,3.3rem);line-height:1.12;color:#173e31;margin:12px 0 18px}
+.feedback-copy h2 em{color:#779e51;font-style:normal}
+.feedback-copy>p{max-width:520px;color:#69786e;line-height:1.8}
+.feedback-trust{margin-top:25px;color:#d49b29;letter-spacing:2px;font-size:1.1rem}
+.feedback-trust span{display:block;margin-top:8px;color:#68796e;letter-spacing:0;font-size:.82rem;line-height:1.6}
+.feedback-form{display:grid;gap:10px;padding:26px;background:#fff;border:1px solid #dce7dd;border-radius:20px;box-shadow:0 14px 38px #2349380c}
+.feedback-form label{font-size:.78rem;font-weight:800;color:#244b3b;margin-top:5px}
+.feedback-form label span{font-weight:500;color:#87948a}
+.feedback-form input,.feedback-form select,.feedback-form textarea{width:100%;box-sizing:border-box;padding:12px 13px;border:1px solid #d9e3da;border-radius:10px;background:#fbfcf9;color:#213e31;font:inherit;font-size:.88rem;outline-color:#6b9a68}
+.feedback-form textarea{resize:vertical;min-height:105px}
+.feedback-submit{border:0;cursor:pointer;text-align:center;justify-content:center;margin-top:8px}
+.feedback-form>small{font-size:.7rem;color:#748278;line-height:1.5}
+.secondary-phone{display:block;margin-top:13px}
+@media(max-width:760px){.feedback-grid{grid-template-columns:1fr;gap:24px}.feedback-form{padding:20px}.topbar-inner{flex-wrap:wrap;gap:8px}.topbar-inner>a{font-size:.72rem}.mobile-bar{grid-template-columns:1fr 1fr 1fr}.mobile-bar a{font-size:.72rem}}
