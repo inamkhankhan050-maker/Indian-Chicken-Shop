@@ -52,7 +52,7 @@
         addText(top, 'strong', '', item.name || 'Customer');
         addText(top, 'span', 'review-stars', '★'.repeat(Number(item.rating)) + '☆'.repeat(5 - Number(item.rating)));
         card.appendChild(top);
-        addText(card, 'small', 'review-product', 'Purchased: ' + item.product);
+        if (item.product) addText(card, 'small', 'review-product', 'Purchased: ' + item.product);
         addText(card, 'p', '', item.message);
         const date = item.created_at ? new Date(item.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
         addText(card, 'time', '', date);
@@ -82,8 +82,6 @@
           method: 'POST',
           headers: { ...headers, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
           body: JSON.stringify({
-            name: String(data.get('name') || '').trim() || null,
-            product: String(data.get('product') || '').trim(),
             rating: Number(data.get('rating')),
             message: String(data.get('message') || '').trim(),
             approved: false
