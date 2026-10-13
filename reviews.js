@@ -82,6 +82,7 @@
           method: 'POST',
           headers: { ...headers, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
           body: JSON.stringify({
+            name: String(data.get('name') || '').trim() || null,
             rating: Number(data.get('rating')),
             message: String(data.get('message') || '').trim(),
             approved: false
