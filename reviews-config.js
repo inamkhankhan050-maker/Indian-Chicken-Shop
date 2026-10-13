@@ -1,6 +1,6 @@
-// Public Supabase project settings for customer reviews.
-// Use the project's anon/publishable key only. NEVER put a service_role key here.
+```js
 window.ICS_REVIEWS_CONFIG = {
-  url: "https://YOUR_SUPABASE_PROJECT.supabase.co",
-  anonKey: "YOUR_SUPABASE_ANON_KEY"
+  url: "https://nyzganbxpivyhhtbsmuc.supabase.co",
+  anonKey: "sb_publishable_2NG14e8YfLOPqgQFiKMJCw_Hnpn0IhJ"
 };
+```
