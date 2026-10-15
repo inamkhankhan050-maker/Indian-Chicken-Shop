@@ -765,3 +765,49 @@ body{background:#fff;color:#202923}
   object-fit:contain!important;
   object-position:top center!important;
 }
+
+
+/* Restore the first slide to the original full-size carousel layout. */
+.hero-slider:has(.chicken-banner-slide.active){
+  position:relative!important;
+  display:block!important;
+  height:clamp(350px,27vw,430px)!important;
+  min-height:350px!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+}
+.hero-slider:has(.chicken-banner-slide.active) .hero-slides{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+}
+.hero-slider:has(.chicken-banner-slide.active) .chicken-banner-slide.active{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+}
+.hero-slider:has(.chicken-banner-slide.active) .chicken-banner-image{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.chicken-banner-slide.active){
+    height:340px!important;
+    min-height:340px!important;
+  }
+}
+@media(max-width:420px){
+  .hero-slider:has(.chicken-banner-slide.active){
+    height:300px!important;
+    min-height:300px!important;
+  }
+}
