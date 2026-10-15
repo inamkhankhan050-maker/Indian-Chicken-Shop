@@ -698,3 +698,42 @@ body{background:#fff;color:#202923}
     object-position:center top!important;
   }
 }
+
+
+/* Correct final rule for slide 4: show the whole image from its top edge.
+   Keep its natural 1500:381 ratio and add height below it instead of cropping. */
+.hero-slider:has(.hero-slide[data-slide="3"].active){
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  height:calc(100vw * 381 / 1500 + 70px)!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+  background:#fff!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"].active{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"] .delivery-banner-image{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:auto!important;
+  bottom:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:top center!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.hero-slide[data-slide="3"].active){
+    height:calc(100vw * 381 / 1500 + 44px)!important;
+  }
+}
