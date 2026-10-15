@@ -345,3 +345,17 @@ body{background:#fff;color:#202923}
   .brand-chicken{font-size:.85rem}
 }
 @media(prefers-reduced-motion:reduce){.hero-slide,.hero-dot,.hero-arrow{transition:none}}
+
+
+/* Delivery banner slide: show the entire uploaded artwork without cropping or duplicate overlay text. */
+.hero-slide[data-slide="3"] .hero-slide-image{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+.hero-slide[data-slide="3"] .hero-slide-shade,
+.hero-slide[data-slide="3"] .hero-slide-content{display:none!important}
