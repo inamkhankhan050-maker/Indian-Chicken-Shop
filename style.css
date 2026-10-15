@@ -568,3 +568,39 @@ body{background:#fff;color:#202923}
     object-position:center center!important;
   }
 }
+
+
+/* Final fix: keep the full chicken artwork visible, including its printed Order Now button. */
+.hero-slider:has(.chicken-banner-slide.active){
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+}
+.hero-slider:has(.chicken-banner-slide.active) .chicken-banner-slide.active{
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+}
+.hero-slider:has(.chicken-banner-slide.active) .chicken-banner-image{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center top!important;
+}
+.hero-slide.chicken-banner-slide .chicken-banner-order{
+  left:22.5%!important;
+  top:80%!important;
+  width:15%!important;
+  height:18%!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.chicken-banner-slide.active){height:auto!important;aspect-ratio:auto!important}
+  .hero-slider:has(.chicken-banner-slide.active) .chicken-banner-image{
+    width:100%!important;height:auto!important;object-fit:contain!important;
+  }
+}
