@@ -538,3 +538,33 @@ body{background:#fff;color:#202923}
     object-position:center top!important;
   }
 }
+
+
+/* Correct the FOURTH (delivery) slide specifically: show the complete artwork.
+   Never use cover/cropping here; retain the original 1500:381 proportions. */
+.hero-slider:has(.hero-slide[data-slide="3"].active){
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1500 / 381!important;
+  overflow:hidden!important;
+}
+.hero-slide[data-slide="3"] .delivery-banner-image{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#fff!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.hero-slide[data-slide="3"].active){
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:1500 / 381!important;
+  }
+  .hero-slide[data-slide="3"] .delivery-banner-image{
+    object-fit:contain!important;
+    object-position:center center!important;
+  }
+}
