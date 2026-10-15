@@ -858,3 +858,39 @@ body{background:#fff;color:#202923}
     aspect-ratio:1500 / 381!important;
   }
 }
+
+
+/* Mobile-only fix: keep the first chicken banner and fourth delivery banner
+   at their artwork ratio, avoiding large blank areas and clipped presentation.
+   Do not change other slides or page sections. */
+.hero-slider:has(.chicken-banner-slide.active),
+.hero-slider:has(.delivery-banner-slide.active){
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1500 / 381!important;
+}
+.hero-slide.chicken-banner-slide .chicken-banner-image,
+.hero-slide.delivery-banner-slide .delivery-banner-image{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.chicken-banner-slide.active),
+  .hero-slider:has(.delivery-banner-slide.active){
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:1500 / 381!important;
+  }
+  .hero-slide.chicken-banner-slide .chicken-banner-order{
+    left:5%;
+    bottom:8%;
+    min-height:32px;
+    padding:0 12px;
+    gap:6px;
+    font-size:.72rem;
+    border-width:1px;
+  }
+  .hero-slide.chicken-banner-slide .chicken-banner-order span{font-size:.9rem}
+}
