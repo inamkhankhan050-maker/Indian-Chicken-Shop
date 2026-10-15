@@ -509,3 +509,32 @@ body{background:#fff;color:#202923}
     height:20%;
   }
 }
+
+
+/* Banner framing: preserve the top edge and shop name; any crop happens below. */
+.hero-slider:has(.delivery-banner-slide.active),
+.hero-slider:has(.chicken-banner-slide.active){
+  height:clamp(250px,25.4vw,365px)!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+}
+.hero-slider:has(.delivery-banner-slide.active) .delivery-banner-image,
+.hero-slider:has(.chicken-banner-slide.active) .chicken-banner-image{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center top!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.delivery-banner-slide.active),
+  .hero-slider:has(.chicken-banner-slide.active){
+    height:clamp(180px,25.4vw,250px)!important;
+    min-height:0!important;
+  }
+  .hero-slider:has(.delivery-banner-slide.active) .delivery-banner-image,
+  .hero-slider:has(.chicken-banner-slide.active) .chicken-banner-image{
+    object-fit:cover!important;
+    object-position:center top!important;
+  }
+}
