@@ -454,21 +454,32 @@ body{background:#fff;color:#202923}
 
 
 /* Fix: keep the chicken Order Now link above the banner artwork and tappable. */
+/* Fit the first banner to its artwork ratio on mobile and desktop. */
+.hero-slider:has(.chicken-banner-slide.active){
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1500 / 381!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.chicken-banner-slide.active){
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:1500 / 381!important;
+  }
+}
 .hero-slide.chicken-banner-slide{position:absolute;isolation:isolate}
 .hero-slide.chicken-banner-slide .chicken-banner-image{z-index:0;pointer-events:none}
 .hero-slide.chicken-banner-slide .chicken-banner-order{
-  /* The words "Order Now" are part of the banner image. Make this link a
-     transparent tap target directly over those words instead of drawing a
-     second button elsewhere on the slide. */
+  /* Transparent tap target aligned with "Order Now" printed in the image. */
   z-index:20!important;
   pointer-events:auto!important;
   cursor:pointer;
-  left:52%;
-  top:76%;
+  left:22.5%;
+  top:80%;
   bottom:auto!important;
   transform:translate(-50%,-50%);
-  width:26%;
-  height:16%;
+  width:15%;
+  height:18%;
   min-height:0;
   padding:0;
   border:0;
@@ -492,12 +503,9 @@ body{background:#fff;color:#202923}
 }
 @media(max-width:560px){
   .hero-slide.chicken-banner-slide .chicken-banner-order{
-    left:52%;
-    top:76%;
-    bottom:auto!important;
-    width:34%;
-    height:17%;
-    min-height:0;
-    padding:0;
+    left:22.5%;
+    top:80%;
+    width:16%;
+    height:20%;
   }
 }
