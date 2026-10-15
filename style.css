@@ -347,15 +347,26 @@ body{background:#fff;color:#202923}
 @media(prefers-reduced-motion:reduce){.hero-slide,.hero-dot,.hero-arrow{transition:none}}
 
 
-/* Delivery banner slide: show the entire uploaded artwork without cropping or duplicate overlay text. */
+/* Final delivery-slide layout: match the 1500x381 artwork ratio at every viewport. */
 .hero-slide[data-slide="3"] .hero-slide-image{
-  position:absolute!important;
-  inset:0!important;
   width:100%!important;
   height:100%!important;
-  object-fit:contain!important;
+  inset:0!important;
+  object-fit:fill!important;
   object-position:center!important;
   background:#fff!important;
 }
 .hero-slide[data-slide="3"] .hero-slide-shade,
 .hero-slide[data-slide="3"] .hero-slide-content{display:none!important}
+.hero-slider:has(.hero-slide[data-slide="3"].active){
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1500 / 381!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.hero-slide[data-slide="3"].active){
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:1500 / 381!important;
+  }
+}
