@@ -169,3 +169,14 @@
   .product-body p { font-size: .62rem; min-height: 62px; }
   .order-link { font-size: .56rem; }
 }
+
+
+/* Clear call/WhatsApp actions under each contact number */
+.contact-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:0 0 16px}
+.contact-actions a{display:inline-flex;align-items:center;min-height:30px}
+.contact-box .secondary-phone{margin-top:12px}
+@media(max-width:760px){
+  .contact-actions{gap:22px;margin-bottom:18px}
+  .contact-box strong{font-size:1.55rem;letter-spacing:.2px}
+  .contact-box a{font-size:.8rem}
+}
