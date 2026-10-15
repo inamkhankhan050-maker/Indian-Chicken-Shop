@@ -1048,3 +1048,48 @@ body{background:#fff;color:#202923}
   object-fit:contain!important;
   object-position:center!important;
 }
+
+
+/* Consolidated fourth-banner override: full image, no crop, consistent desktop/mobile sizing. */
+#home.hero-slider.delivery-banner-active {
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1500 / 381!important;
+  overflow:hidden!important;
+}
+#home.hero-slider.delivery-banner-active .hero-slides {
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+}
+#home.hero-slider.delivery-banner-active .delivery-banner-slide.active {
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+  opacity:1!important;
+  visibility:visible!important;
+  transform:none!important;
+  overflow:hidden!important;
+}
+#home.hero-slider.delivery-banner-active .delivery-banner-image {
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-width:0!important;
+  min-height:0!important;
+  max-width:100%!important;
+  max-height:none!important;
+  aspect-ratio:1500 / 381!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
