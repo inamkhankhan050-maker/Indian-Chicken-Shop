@@ -254,3 +254,28 @@ body{background:#fff;color:#202923}
  .nav nav::-webkit-scrollbar{display:none}
  .nav nav a{display:inline-flex;align-items:center;min-height:38px;font-size:.84rem;font-weight:800;flex:0 0 auto}
 }
+
+
+/* Dark premium butcher-shop header: original ICS branding, not a copied logo */
+:root{--ics-charcoal:#202124;--ics-orange:#ef6048;--ics-cream:#fffaf4}
+.topbar{background:#151618;color:#d7d7d7;border-bottom:1px solid #303135}
+.topbar-inner{min-height:34px;font-size:.69rem;letter-spacing:.045em}
+.topbar-inner a{color:#fff;font-weight:700}
+.header{background:var(--ics-charcoal);color:#fff;border-bottom:3px solid var(--ics-orange);box-shadow:0 5px 20px #0000001c}
+.nav{color:#fff}
+.brand{color:#fff;font-family:Manrope,'DM Sans',sans-serif;font-weight:800;letter-spacing:-.035em}
+.brand:hover{color:#fff}
+.brand-mark{background:var(--ics-orange);color:#fff;border-radius:5px;font-family:Manrope,sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.04em;box-shadow:inset 0 -3px 0 #0000001a}
+.brand small{color:#c9c9c9;font-weight:700}
+.nav nav a{color:#f6f6f6;text-transform:uppercase;font-size:.78rem;letter-spacing:.045em;font-weight:800;transition:color .18s}
+.nav nav a:hover,.nav nav a:focus-visible{color:#ff765f}
+.nav nav a:focus-visible{outline:2px solid #ff765f;outline-offset:5px}
+.nav-order{background:var(--ics-orange);color:#fff;border:1px solid var(--ics-orange);font-weight:800;border-radius:4px;box-shadow:0 4px 12px #0002}
+.nav-order:hover{background:#d94b35;color:#fff}
+@media(max-width:760px){
+ .topbar-inner{gap:8px;font-size:.59rem}
+ .header{border-bottom-width:2px}
+ .nav nav{background:#202124;border-top:1px solid #3a3b3e}
+ .nav nav a{font-size:.78rem;color:#fff}
+ .nav nav a:hover{color:#ff765f}
+}
