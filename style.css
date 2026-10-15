@@ -604,3 +604,30 @@ body{background:#fff;color:#202923}
     width:100%!important;height:auto!important;object-fit:contain!important;
   }
 }
+
+
+/* Fourth (instant-delivery) banner: anchor artwork at the top; any crop is at the bottom. */
+.hero-slider:has(.hero-slide[data-slide="3"].active){
+  height:clamp(250px,25.4vw,365px)!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+}
+.hero-slide[data-slide="3"] .delivery-banner-image{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center top!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.hero-slide[data-slide="3"].active){
+    height:clamp(180px,25.4vw,250px)!important;
+    aspect-ratio:auto!important;
+  }
+  .hero-slide[data-slide="3"] .delivery-banner-image{
+    object-fit:cover!important;
+    object-position:center top!important;
+  }
+}
