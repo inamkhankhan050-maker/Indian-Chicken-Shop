@@ -1013,3 +1013,38 @@ body{background:#fff;color:#202923}
   object-fit:contain!important;
   object-position:center center!important;
 }
+
+/* Stable fourth-slide sizing: driven by a JS class, not :has(), so older
+   Mac browsers and mobile browsers use the same layout. */
+#home.hero-slider.delivery-banner-active{
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1500 / 381!important;
+  overflow:hidden!important;
+}
+#home.hero-slider.delivery-banner-active .hero-slides{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+}
+#home.hero-slider.delivery-banner-active .delivery-banner-slide.active{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+#home.hero-slider.delivery-banner-active .delivery-banner-image{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
