@@ -330,3 +330,20 @@ html,body{max-width:100%;overflow-x:clip}
  .hero-slide-content .btn{padding:8px 9px;font-size:.6rem}
  .hero-slide[data-slide="3"] .hero-slide-image{object-fit:contain}
 }
+
+
+/* Correct delivery slide proportions and keep the ICS letters with the chicken icon */
+.brand-mark{display:flex!important;align-items:center;justify-content:center;gap:2px!important;font-size:inherit!important;letter-spacing:0!important}
+.brand-ics{font-family:Manrope,'DM Sans',sans-serif;font-size:.78rem;font-weight:900;letter-spacing:-.04em;line-height:1}
+.brand-chicken{font-size:1.05rem;line-height:1}
+.hero-slider{height:clamp(381px,30vw,470px);min-height:381px}
+.hero-slide[data-slide="3"] .hero-slide-image{object-fit:fill!important;object-position:center!important;width:100%;height:100%}
+@media(max-width:760px){
+ .hero-slider{height:auto!important;min-height:0!important;aspect-ratio:1500/381}
+ .hero-slide[data-slide="3"] .hero-slide-image{object-fit:fill!important;width:100%;height:100%}
+}
+@media(max-width:420px){
+ .hero-slider{aspect-ratio:1500/381;min-height:0!important}
+ .brand-ics{font-size:.68rem}
+ .brand-chicken{font-size:.9rem}
+}
