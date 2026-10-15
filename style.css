@@ -279,3 +279,19 @@ body{background:#fff;color:#202923}
  .nav nav a{font-size:.78rem;color:#fff}
  .nav nav a:hover{color:#ff765f}
 }
+
+
+/* Premium ICS wordmark */
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0;text-decoration:none}
+.brand-mark{width:48px;height:48px;display:grid;place-items:center;font-size:1rem;letter-spacing:-.06em;border:1px solid #ff8a72;position:relative}
+.brand-mark:after{content:"";position:absolute;inset:4px;border:1px solid #ffffff55;border-radius:3px;pointer-events:none}
+.brand-copy{display:flex;flex-direction:column;gap:4px;line-height:1}
+.brand-name{font-size:clamp(.9rem,1.3vw,1.22rem);font-weight:800;letter-spacing:.035em;white-space:nowrap;color:#fff}
+.brand-name strong{color:#ff765f;font-weight:900}
+.brand-copy small{font-size:.58rem;letter-spacing:.19em;text-transform:uppercase;color:#c8c8c8;font-weight:700}
+@media(max-width:760px){
+ .brand{gap:9px}
+ .brand-mark{width:42px;height:42px;font-size:.9rem}
+ .brand-name{font-size:clamp(.78rem,3.3vw,1rem);letter-spacing:.01em}
+ .brand-copy small{font-size:.49rem;letter-spacing:.13em}
+}
