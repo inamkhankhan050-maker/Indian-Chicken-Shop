@@ -737,3 +737,31 @@ body{background:#fff;color:#202923}
     height:calc(100vw * 381 / 1500 + 44px)!important;
   }
 }
+
+
+/* Repair first-slide layout: its in-flow banner must size the slides wrapper. */
+.hero-slider:has(.chicken-banner-slide.active) .hero-slides{
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+}
+.hero-slider:has(.chicken-banner-slide.active) .chicken-banner-slide.active{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+}
+.hero-slider:has(.chicken-banner-slide.active) .chicken-banner-image{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%!important;
+  object-fit:contain!important;
+  object-position:top center!important;
+}
