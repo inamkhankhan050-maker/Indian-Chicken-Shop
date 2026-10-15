@@ -1093,3 +1093,39 @@ body{background:#fff;color:#202923}
   object-fit:contain!important;
   object-position:center!important;
 }
+
+
+/* Final correction: let the fourth banner's real image dimensions determine its height. */
+#home.hero-slider.delivery-banner-active{
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+#home.hero-slider.delivery-banner-active .hero-slides{
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+}
+#home.hero-slider.delivery-banner-active .delivery-banner-slide.active{
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  overflow:visible!important;
+}
+#home.hero-slider.delivery-banner-active .delivery-banner-image{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:center!important;
+}
