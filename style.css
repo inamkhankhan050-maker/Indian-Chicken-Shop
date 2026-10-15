@@ -401,3 +401,53 @@ body{background:#fff;color:#202923}
   object-position:center;
   background:#fff;
 }
+
+
+/* Clickable Order Now call-to-action on the first chicken banner only. */
+.hero-slide.chicken-banner-slide .chicken-banner-order{
+  position:absolute;
+  z-index:4;
+  left:clamp(22px,7vw,110px);
+  bottom:clamp(24px,5vw,54px);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:48px;
+  padding:0 25px;
+  border:2px solid #ef6048;
+  border-radius:5px;
+  background:#ef6048;
+  color:#fff;
+  font:800 1rem/1 'DM Sans',Arial,sans-serif;
+  text-decoration:none;
+  box-shadow:0 8px 24px #0003;
+  transition:background .18s ease,transform .18s ease,box-shadow .18s ease;
+}
+.hero-slide.chicken-banner-slide .chicken-banner-order span{font-size:1.2rem}
+.hero-slide.chicken-banner-slide .chicken-banner-order:hover{
+  background:#d94b35;
+  border-color:#d94b35;
+  color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 11px 28px #0004;
+}
+.hero-slide.chicken-banner-slide .chicken-banner-order:focus-visible{
+  outline:3px solid #173e31;
+  outline-offset:4px;
+}
+@media(max-width:560px){
+  .hero-slide.chicken-banner-slide .chicken-banner-order{
+    left:50%;
+    bottom:13%;
+    transform:translateX(-50%);
+    min-height:40px;
+    padding:0 18px;
+    gap:8px;
+    font-size:.84rem;
+    white-space:nowrap;
+  }
+  .hero-slide.chicken-banner-slide .chicken-banner-order:hover{
+    transform:translateX(-50%) translateY(-2px);
+  }
+}
