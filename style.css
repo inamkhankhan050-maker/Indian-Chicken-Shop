@@ -631,3 +631,33 @@ body{background:#fff;color:#202923}
     object-position:center top!important;
   }
 }
+
+
+/* Definitive fourth-banner fix: display the entire 1500x381 artwork without cropping. */
+.hero-slider:has(.hero-slide[data-slide="3"].active){
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1500 / 381!important;
+  overflow:hidden!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"]{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"] .delivery-banner-image{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center top!important;
+  background:#fff!important;
+}
