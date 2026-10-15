@@ -371,8 +371,3 @@ body{background:#fff;color:#202923}
   }
 }
 
-/* Uploaded chicken artwork: display as the first complete carousel banner. */
-.hero-slide[data-slide="0"] .hero-slide-image{object-fit:contain!important;object-position:center!important;background:#fff!important}
-.hero-slide[data-slide="0"] .hero-slide-shade,.hero-slide[data-slide="0"] .hero-slide-content{display:none!important}
-.hero-slider:has(.hero-slide[data-slide="0"].active){height:auto!important;min-height:0!important;aspect-ratio:1500 / 381!important}
-@media(max-width:760px){.hero-slider:has(.hero-slide[data-slide="0"].active){height:auto!important;min-height:0!important;aspect-ratio:1500 / 381!important}}
