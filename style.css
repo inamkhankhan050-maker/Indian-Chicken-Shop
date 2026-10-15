@@ -236,3 +236,21 @@ body{background:#fff;color:#202923}
 .floating-whatsapp:hover{transform:translateY(-3px);box-shadow:0 7px 20px #0004}
 .floating-whatsapp:focus-visible{outline:3px solid #153b2e;outline-offset:3px}
 @media(max-width:760px){.floating-whatsapp{right:15px;bottom:88px;width:54px;height:54px}.floating-whatsapp svg{width:31px;height:31px}}
+
+
+/* Clear, prominent store navigation inspired by the reference layout */
+.nav nav{display:flex;align-items:center;gap:clamp(14px,1.7vw,27px);margin-left:auto}
+.nav nav a{font-size:.9rem;font-weight:800;letter-spacing:.01em;color:#29483c;white-space:nowrap;padding:10px 0}
+.nav nav a:hover{color:#08785a}
+@media(max-width:1050px){.nav{gap:14px}.nav nav{gap:16px}.nav nav a{font-size:.82rem}}
+@media(max-width:760px){
+ .header{height:auto}
+ .nav{height:auto;min-height:68px;flex-wrap:wrap;gap:0;padding-top:10px;padding-bottom:0}
+ .brand{max-width:calc(100% - 126px);font-size:.9rem;gap:8px}
+ .brand small{font-size:.5rem;letter-spacing:1px}
+ .brand-mark{width:44px;height:44px;flex:0 0 44px}
+ .nav-order{margin-left:auto;max-width:124px;font-size:.62rem;padding:10px 9px}
+ .nav nav{order:3;display:flex!important;flex:0 0 calc(100% + 36px);width:calc(100% + 36px);margin:9px -18px 0;padding:0 18px 10px;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;border-top:1px solid #e7e9e0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .nav nav::-webkit-scrollbar{display:none}
+ .nav nav a{display:inline-flex;align-items:center;min-height:38px;font-size:.84rem;font-weight:800;flex:0 0 auto}
+}
