@@ -1129,3 +1129,9 @@ body{background:#fff;color:#202923}
   object-fit:initial!important;
   object-position:center!important;
 }
+
+
+/* Priority fix requested: keep the top of the fourth banner visible (shop name). */
+#home.hero-slider.delivery-banner-active .delivery-banner-image{
+  object-position:top center!important;
+}
