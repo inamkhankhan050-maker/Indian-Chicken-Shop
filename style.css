@@ -457,17 +457,47 @@ body{background:#fff;color:#202923}
 .hero-slide.chicken-banner-slide{position:absolute;isolation:isolate}
 .hero-slide.chicken-banner-slide .chicken-banner-image{z-index:0;pointer-events:none}
 .hero-slide.chicken-banner-slide .chicken-banner-order{
+  /* The words "Order Now" are part of the banner image. Make this link a
+     transparent tap target directly over those words instead of drawing a
+     second button elsewhere on the slide. */
   z-index:20!important;
   pointer-events:auto!important;
   cursor:pointer;
-  bottom:clamp(58px,8vw,92px);
+  left:52%;
+  top:76%;
+  bottom:auto!important;
+  transform:translate(-50%,-50%);
+  width:26%;
+  height:16%;
+  min-height:0;
+  padding:0;
+  border:0;
+  border-radius:18px;
+  background:transparent;
+  box-shadow:none;
+  color:transparent!important;
+  font-size:0;
 }
-.hero-slider .hero-slide.chicken-banner-slide .chicken-banner-order:link,
-.hero-slider .hero-slide.chicken-banner-slide .chicken-banner-order:visited{color:#fff}
+.hero-slide.chicken-banner-slide .chicken-banner-order span{display:none}
+.hero-slide.chicken-banner-slide .chicken-banner-order:hover{
+  background:rgba(255,255,255,.04);
+  border:0;
+  box-shadow:none;
+  transform:translate(-50%,-50%);
+}
+.hero-slide.chicken-banner-slide .chicken-banner-order:focus-visible{
+  outline:3px solid #08785a;
+  outline-offset:2px;
+  background:rgba(255,255,255,.08);
+}
 @media(max-width:560px){
   .hero-slide.chicken-banner-slide .chicken-banner-order{
-    bottom:22%!important;
-    min-height:44px;
-    padding:0 20px;
+    left:52%;
+    top:76%;
+    bottom:auto!important;
+    width:34%;
+    height:17%;
+    min-height:0;
+    padding:0;
   }
 }
