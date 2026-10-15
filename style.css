@@ -1135,3 +1135,34 @@ body{background:#fff;color:#202923}
 #home.hero-slider.delivery-banner-active .delivery-banner-image{
   object-position:top center!important;
 }
+
+
+/* FINAL targeted correction: show the complete fourth delivery banner artwork. */
+#home.hero-slider.delivery-banner-active {
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 1500 / 381 !important;
+  overflow: hidden;
+}
+#home.hero-slider.delivery-banner-active .hero-slides {
+  position: absolute !important;
+  inset: 0 !important;
+}
+#home.hero-slider.delivery-banner-active .delivery-banner-slide.active {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+#home.hero-slider.delivery-banner-active .delivery-banner-image {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
