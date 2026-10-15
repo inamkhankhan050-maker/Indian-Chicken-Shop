@@ -390,3 +390,14 @@ body{background:#fff;color:#202923}
 .hero-slide.delivery-banner-slide .delivery-banner-image{width:100%;height:100%;object-fit:contain;object-position:center;background:#fff;}
 .hero-slider:has(.delivery-banner-slide.active){height:auto;min-height:0;aspect-ratio:1500/381;}
 @media(max-width:760px){.hero-slider:has(.delivery-banner-slide.active){height:auto;min-height:0;aspect-ratio:1500/381;}}
+
+
+/* First carousel slide: show the uploaded chicken banner without cropping. */
+.hero-slide.chicken-banner-slide{background:#fff}
+.hero-slide.chicken-banner-slide .chicken-banner-image{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+}
