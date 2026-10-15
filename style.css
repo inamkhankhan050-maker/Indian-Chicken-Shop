@@ -661,3 +661,40 @@ body{background:#fff;color:#202923}
   object-position:center top!important;
   background:#fff!important;
 }
+
+
+/* Fourth banner only: make it taller so the full top area remains visible;
+   if anything must be cropped, crop from the bottom, never the top. */
+.hero-slider:has(.hero-slide[data-slide="3"].active){
+  height:clamp(360px,32vw,520px)!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"]{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"] .delivery-banner-image{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  object-position:center top!important;
+}
+@media(max-width:760px){
+  .hero-slider:has(.hero-slide[data-slide="3"].active){
+    height:clamp(300px,58vw,430px)!important;
+    aspect-ratio:auto!important;
+  }
+  .hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"] .delivery-banner-image{
+    object-fit:cover!important;
+    object-position:center top!important;
+  }
+}
