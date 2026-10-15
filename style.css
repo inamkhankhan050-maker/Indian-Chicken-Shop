@@ -1166,3 +1166,10 @@ body{background:#fff;color:#202923}
   object-fit: contain !important;
   object-position: center center !important;
 }
+
+
+/* Fourth-slide correction: render the original image at natural proportional height. */
+#home.hero-slider.delivery-banner-active{display:block!important;position:relative!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;overflow:visible!important}
+#home.hero-slider.delivery-banner-active .hero-slides{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:auto!important;min-height:0!important;overflow:visible!important}
+#home.hero-slider.delivery-banner-active .delivery-banner-slide.active{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:auto!important;min-height:0!important;opacity:1!important;visibility:visible!important;overflow:visible!important;transform:none!important}
+#home.hero-slider.delivery-banner-active .delivery-banner-image{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:auto!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:none!important;aspect-ratio:auto!important;object-fit:initial!important;object-position:center!important}
