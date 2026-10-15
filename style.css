@@ -933,3 +933,45 @@ body{background:#fff;color:#202923}
   object-fit:contain!important;
   object-position:center!important;
 }
+
+
+/* Hotfix: keep slide 4 visible and let its full image determine the height.
+   Scoped only to the delivery banner when it is the active carousel slide. */
+.hero-slider:has(.delivery-banner-slide.active){
+  display:block!important;
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.hero-slider:has(.delivery-banner-slide.active) .hero-slides{
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+}
+.hero-slider:has(.delivery-banner-slide.active) .delivery-banner-slide.active{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  opacity:1!important;
+  visibility:visible!important;
+  z-index:2!important;
+}
+.hero-slider:has(.delivery-banner-slide.active) .delivery-banner-image{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-width:100%!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
