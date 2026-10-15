@@ -977,3 +977,39 @@ body{background:#fff;color:#202923}
   object-fit:contain!important;
   object-position:center!important;
 }
+
+/* Final targeted repair for slide 4: use the exact slide selector so it
+   overrides earlier fixed-height/cover rules without affecting other slides. */
+.hero-slider:has(.hero-slide[data-slide="3"].active){
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1500 / 381!important;
+  overflow:hidden!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slides{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"].active{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  opacity:1!important;
+  visibility:visible!important;
+  overflow:hidden!important;
+}
+.hero-slider:has(.hero-slide[data-slide="3"].active) .hero-slide[data-slide="3"] .delivery-banner-image{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+}
