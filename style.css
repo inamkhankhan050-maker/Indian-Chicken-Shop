@@ -295,3 +295,38 @@ body{background:#fff;color:#202923}
  .brand-name{font-size:clamp(.78rem,3.3vw,1rem);letter-spacing:.01em}
  .brand-copy small{font-size:.49rem;letter-spacing:.13em}
 }
+
+
+/* Final hero and branding fixes */
+html,body{max-width:100%;overflow-x:clip}
+.brand-mark{font-size:1.45rem!important;letter-spacing:0!important}
+.brand-mark:after{inset:3px}
+.hero-slider{height:clamp(350px,27vw,430px);min-height:350px}
+.hero-slide-image{object-fit:cover;object-position:center 48%}
+.hero-slide[data-slide="3"]{background:#fff}
+.hero-slide[data-slide="3"] .hero-slide-image{object-fit:contain;object-position:center center;background:#fff}
+.hero-slide[data-slide="3"] .hero-slide-shade{display:none}
+.hero-slide[data-slide="3"] .hero-slide-content{display:none}
+.hero-slider .hero-arrow{z-index:5}
+.hero-slider .hero-dots{z-index:6}
+.floating-whatsapp{right:max(20px,env(safe-area-inset-right))!important;bottom:max(20px,env(safe-area-inset-bottom))!important;transform:none;overflow:visible;clip-path:none}
+.floating-whatsapp svg{flex:none;max-width:100%;max-height:100%}
+@media(max-width:760px){
+ .hero-slider{height:auto;min-height:0;aspect-ratio:1500/381}
+ .hero-slides,.hero-slide{position:absolute;inset:0}
+ .hero-slide[data-slide="3"] .hero-slide-image{object-fit:contain}
+ .hero-slide-content{padding-top:20px;padding-bottom:42px}
+ .hero-slide-content h1{font-size:clamp(1.7rem,6vw,2.8rem);letter-spacing:-1px;line-height:1.02;max-width:90%}
+ .hero-slide-content p{max-width:75%;font-size:.82rem}
+ .hero-slide-content .hero-actions{gap:7px}
+ .hero-slide-content .btn{padding:10px 12px;font-size:.65rem}
+ .floating-whatsapp{right:16px!important;bottom:18px!important;width:54px!important;height:54px!important}
+}
+@media(max-width:420px){
+ .hero-slider{aspect-ratio:1.8/1;min-height:190px}
+ .hero-slide-content{padding:18px 0 38px}
+ .hero-slide-content h1{font-size:1.65rem;max-width:95%}
+ .hero-slide-content p{font-size:.72rem;max-width:90%;margin-bottom:10px}
+ .hero-slide-content .btn{padding:8px 9px;font-size:.6rem}
+ .hero-slide[data-slide="3"] .hero-slide-image{object-fit:contain}
+}
