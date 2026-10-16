@@ -1173,3 +1173,20 @@ body{background:#fff;color:#202923}
 #home.hero-slider.delivery-banner-active .hero-slides{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:auto!important;min-height:0!important;overflow:visible!important}
 #home.hero-slider.delivery-banner-active .delivery-banner-slide.active{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:auto!important;min-height:0!important;opacity:1!important;visibility:visible!important;overflow:visible!important;transform:none!important}
 #home.hero-slider.delivery-banner-active .delivery-banner-image{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:auto!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:none!important;aspect-ratio:auto!important;object-fit:initial!important;object-position:center!important}
+
+
+/* Image-led shop category cards */
+.category-strip{padding:54px 0 62px;background:#fff}
+.category-wrap{width:min(1180px,92%);margin:auto}
+.category-heading{text-align:center;margin-bottom:25px}
+.category-heading small{display:block;color:#789087;font-size:.66rem;letter-spacing:2px;font-weight:900}
+.category-heading h2{margin-top:5px;color:#173e31;font-family:Manrope,Arial,sans-serif;font-size:clamp(1.7rem,3vw,2.25rem);line-height:1.2}
+.category-strip .category-grid{min-height:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;align-items:start}
+.category-strip .category-grid>a.category-card{display:flex;flex-direction:column;gap:12px;padding:0;border:0;border-radius:12px;overflow:hidden;background:transparent;text-align:center;color:#24332d;text-decoration:none;box-shadow:none;transition:transform .2s ease}
+.category-strip .category-card:hover{transform:translateY(-4px)}
+.category-strip .category-card img{display:block;width:100%;height:230px;object-fit:cover;border-radius:10px;background:#edf1e9;transition:filter .2s ease}
+.category-strip .category-card:hover img{filter:brightness(.96)}
+.category-strip .category-card span{display:block;padding:0 5px;font-family:Manrope,Arial,sans-serif;font-size:1rem;font-weight:800;line-height:1.35}
+@media(max-width:1050px){.category-strip .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.category-strip .category-card img{height:clamp(170px,28vw,240px)}}
+@media(max-width:760px){.category-strip{padding:42px 0 48px}.category-heading{margin-bottom:20px}.category-strip .category-grid{gap:14px}.category-strip .category-card span{font-size:.9rem}}
+@media(max-width:520px){.category-strip .category-card img{height:155px}.category-strip .category-grid{gap:12px}.category-strip .category-card span{font-size:.82rem}}
