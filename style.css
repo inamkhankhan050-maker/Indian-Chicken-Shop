@@ -1343,3 +1343,29 @@ body.cart-open{overflow:hidden}
 @media(max-width:850px){.nav{gap:9px}.nav nav{display:none}.brand{margin-right:auto}.nav-cart{min-height:40px;padding:0 10px}.nav-order{padding:10px 12px}}
 @media(max-width:520px){.nav{height:66px;gap:8px}.brand{gap:8px}.brand-mark{width:39px;height:39px}.brand-name{font-size:.82rem}.brand small{font-size:.48rem;letter-spacing:.9px}.nav-cart{min-height:38px;padding:0 9px;gap:5px;font-size:.72rem}.nav-order{padding:10px 9px;font-size:.65rem;border-radius:9px}.order-cart{top:76px;right:10px;width:calc(100vw - 20px);max-height:calc(100dvh - 88px);padding:15px}.cart-item{grid-template-columns:minmax(0,1fr) 50px 70px 50px;gap:6px;padding:9px 7px;font-size:.66rem}.cart-actions{gap:8px}.cart-checkout{padding:0 11px;font-size:.72rem}}
 @media(max-width:380px){.brand-name{font-size:.72rem}.brand small{font-size:.42rem}.nav-order{font-size:.6rem;padding:9px 7px}.nav-cart-label{display:none}}
+
+
+/* Two product cards per row on phones */
+@media(max-width:600px){
+  #shop .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;grid-auto-rows:1fr}
+  #shop .product-grid .product-photo{height:132px!important;flex-basis:132px}
+  #shop .product-grid .product-body{padding:10px 9px 11px}
+  #shop .product-grid .product-body h3{font-size:.84rem;line-height:1.25}
+  #shop .product-grid .product-body p{min-height:54px;margin:6px 0 8px;font-size:.67rem;line-height:1.35}
+  #shop .product-grid .product-rating{gap:5px}
+  #shop .product-grid .product-rating>span{font-size:.9rem;letter-spacing:-1px}
+  #shop .product-grid .product-rating small{font-size:.58rem}
+  #shop .product-grid .product-price-line{margin:8px 0 9px;gap:5px}
+  #shop .product-grid .product-price-line strong{font-size:.9rem}
+  #shop .product-grid .product-price-line>span{font-size:.62rem}
+  #shop .product-grid .cart-add-row{grid-template-columns:1fr;gap:6px;padding-top:7px}
+  #shop .cart-quantity-label{gap:3px;font-size:.6rem}
+  #shop .cart-quantity,#shop .add-to-cart{min-height:36px;font-size:.68rem}
+}
+@media(max-width:360px){
+  #shop .product-grid{gap:8px!important}
+  #shop .product-grid .product-photo{height:116px!important;flex-basis:116px}
+  #shop .product-grid .product-body{padding:9px 7px}
+  #shop .product-grid .product-body p{min-height:50px;font-size:.63rem}
+  #shop .product-grid .product-rating small{font-size:.54rem}
+}
