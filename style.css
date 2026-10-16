@@ -1274,3 +1274,7 @@ body{background:#fff;color:#202923}
 @media(max-width:700px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}.product-grid .product-photo{height:165px!important;flex-basis:165px}.product-grid .product-body{padding:12px 11px}.product-grid .product-body p{min-height:58px;font-size:.72rem}.product-grid .order-link{padding:10px 8px;font-size:.68rem}}
 @media(max-width:460px){.product-grid{grid-template-columns:1fr!important}.product-grid .product-photo{height:190px!important;flex-basis:190px}.product-grid .product-body{padding:13px}.product-grid .product-body p{min-height:0}}
 @media(prefers-reduced-motion:reduce){.image-swap .swap-first,.image-swap .swap-second{animation:none!important}.image-swap .swap-first{opacity:1}.image-swap .swap-second{opacity:0}}
+
+
+/* Four desktop columns leave the requested slot beside Chicken Bones. */
+@media(min-width:901px){.product-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
