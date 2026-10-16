@@ -1278,3 +1278,32 @@ body{background:#fff;color:#202923}
 
 /* Four desktop columns leave the requested slot beside Chicken Bones. */
 @media(min-width:901px){.product-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+
+
+/* Product grid layout and compact cart controls */
+#shop .product-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;align-items:stretch!important;grid-auto-rows:1fr}
+#shop .product-grid>.product-card{min-width:0}
+#shop .product-grid .cart-add-row{display:grid;grid-template-columns:minmax(86px,.72fr) minmax(112px,1fr);align-items:end;gap:8px;margin-top:auto;padding-top:10px}
+#shop .cart-quantity-label{display:flex;flex-direction:column;gap:4px;color:#718078;font-size:.65rem;font-weight:800}
+#shop .cart-quantity{width:100%;min-height:42px;padding:0 9px;border:1px solid #dfe5df;border-radius:8px;background:#fff;color:#20392f;font:700 .78rem 'DM Sans',Arial,sans-serif}
+#shop .add-to-cart{min-height:42px;padding:0 10px;border:0;border-radius:8px;background:#f2644f;color:#fff;font:800 .76rem 'DM Sans',Arial,sans-serif;cursor:pointer;transition:background .15s ease,transform .15s ease}
+#shop .add-to-cart:hover{background:#d94e3a;transform:translateY(-1px)}
+#shop .order-cart{margin:24px 0 12px;padding:20px;border:1px solid #dfe5df;border-radius:14px;background:linear-gradient(135deg,#fbfcf8,#f1f5ed);box-shadow:0 10px 28px rgba(35,73,56,.08)}
+#shop .order-cart[hidden]{display:none!important}
+#shop .order-cart-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
+#shop .order-cart-head small{color:#789087;font-size:.63rem;font-weight:900;letter-spacing:1.4px}
+#shop .order-cart-head h3{margin:3px 0 0;color:#173e31;font:800 1.1rem Manrope,Arial,sans-serif}
+#shop .order-cart-head h3 span{margin-left:8px;color:#738177;font:700 .72rem 'DM Sans',Arial,sans-serif}
+#shop .order-cart-head>strong{color:#ef624b;font:900 1.2rem Manrope,Arial,sans-serif}
+#shop .cart-items{display:grid;gap:7px}
+#shop .cart-item{display:grid;grid-template-columns:minmax(0,1fr) 75px 95px 68px;align-items:center;gap:12px;padding:10px 12px;border:1px solid #e5e9e2;border-radius:9px;background:#fff;color:#26372f;font-size:.78rem}
+#shop .cart-item>span{font-weight:800}
+#shop .cart-item>small{color:#718078}
+#shop .cart-item>strong{color:#173e31;text-align:right}
+#shop .cart-remove,#shop .cart-clear{border:0;background:transparent;color:#7b655e;font:700 .68rem 'DM Sans',Arial,sans-serif;cursor:pointer}
+#shop .cart-actions{display:flex;justify-content:flex-end;align-items:center;gap:12px;margin-top:14px}
+#shop .cart-checkout{min-height:44px;padding:0 18px;border:0;border-radius:9px;background:#0d7555;color:#fff;font:800 .8rem 'DM Sans',Arial,sans-serif;cursor:pointer}
+#shop .cart-checkout:hover{background:#075c42}
+@media(max-width:1100px){#shop .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:760px){#shop .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.cart-item{grid-template-columns:minmax(0,1fr) 56px 75px 55px!important;gap:7px!important}.cart-item,.cart-remove{font-size:.65rem!important}}
+@media(max-width:460px){#shop .product-grid{grid-template-columns:1fr!important}#shop .order-cart{padding:14px}#shop .cart-item{grid-template-columns:minmax(0,1fr) 52px 70px 52px!important;padding:9px 7px!important}#shop .cart-actions{gap:8px}#shop .cart-checkout{padding:0 11px;font-size:.72rem}}
