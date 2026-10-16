@@ -1401,5 +1401,5 @@ body.category-page-mode main>section[hidden]{display:none!important}
 /* Keep mobile category navigation in the header flow. Category views open at the top. */
 @media(max-width:760px){header.header .nav>nav[aria-label="Main navigation"]{display:flex!important;visibility:visible!important;height:auto!important;overflow-x:auto!important;overflow-y:hidden!important}}
 
-/* Product category views: remove the repeated mobile link strip above the products. */
-body.category-page-mode .header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}
+/* Keep the mobile category nav from overlaying hero artwork; category cards remain on every page. */
+@media(max-width:760px){.header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}}
