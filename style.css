@@ -1237,3 +1237,11 @@ body{background:#fff;color:#202923}
 .delivery-banner-brand{border:1px solid rgba(216,183,107,.55);box-shadow:0 5px 16px rgba(17,42,33,.16)}
 .delivery-banner-order{background:linear-gradient(135deg,#a41f16,#cf4937);border-color:#f4d99a;box-shadow:0 7px 20px rgba(60,24,14,.28)}
 @media(max-width:600px){.brand-chicken{width:20px;height:20px;font-size:.72rem}.delivery-banner-mark{width:32px;height:32px;border-radius:8px}}
+
+
+/* Premium homepage trust row */
+.category-heading p{margin:8px auto 0;color:#718078;font-size:.78rem;letter-spacing:.01em}
+.category-assurances{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:-5px 0 24px}
+.category-assurances span{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border:1px solid #e3e7dc;border-radius:999px;background:#fbfaf5;color:#4f6358;font-size:.65rem;font-weight:800;letter-spacing:.02em}
+.category-assurances span:before{content:"✓";display:grid;place-items:center;width:16px;height:16px;border-radius:50%;background:#e8f0df;color:#547546;font-size:.62rem;font-weight:900}
+@media(max-width:520px){.category-assurances{gap:7px;margin:0 0 18px}.category-assurances span{padding:6px 9px;font-size:.59rem}.category-heading p{font-size:.72rem}}
