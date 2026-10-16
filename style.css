@@ -1190,3 +1190,17 @@ body{background:#fff;color:#202923}
 @media(max-width:1050px){.category-strip .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.category-strip .category-card img{height:clamp(170px,28vw,240px)}}
 @media(max-width:760px){.category-strip{padding:42px 0 48px}.category-heading{margin-bottom:20px}.category-strip .category-grid{gap:14px}.category-strip .category-card span{font-size:.9rem}}
 @media(max-width:520px){.category-strip .category-card img{height:155px}.category-strip .category-grid{gap:12px}.category-strip .category-card span{font-size:.82rem}}
+
+
+
+/* Visible brand and CTA over the cropped delivery artwork */
+.delivery-banner-slide{position:absolute}
+.delivery-banner-overlay{position:absolute;inset:0;z-index:4;pointer-events:none}
+.delivery-banner-brand{position:absolute;left:3.2%;top:4%;display:flex;align-items:center;gap:9px;padding:6px 12px 6px 7px;border-radius:10px;background:rgba(255,255,255,.96);box-shadow:0 2px 12px rgba(24,56,44,.13);color:#173e31}
+.delivery-banner-mark{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;background:#f2644f;color:#fff;font:900 .62rem 'DM Sans',Arial,sans-serif;letter-spacing:.2px}
+.delivery-banner-brand strong{display:block;font:900 clamp(.64rem,1.35vw,1rem) Manrope,Arial,sans-serif;line-height:1.1;letter-spacing:.25px;white-space:nowrap}
+.delivery-banner-brand small{display:block;margin-top:3px;color:#68786f;font:800 clamp(.42rem,.65vw,.52rem) 'DM Sans',Arial,sans-serif;letter-spacing:1px;white-space:nowrap}
+.delivery-banner-order{position:absolute;left:17.8%;bottom:4%;pointer-events:auto;display:inline-flex;align-items:center;gap:9px;padding:10px 19px;border:2px solid #fff;border-radius:999px;background:#a41f16;color:#fff;text-decoration:none;font:900 clamp(.68rem,1vw,.82rem) 'DM Sans',Arial,sans-serif;box-shadow:0 6px 18px rgba(50,20,14,.24);transition:transform .18s ease,background .18s ease}
+.delivery-banner-order:hover{transform:translateY(-2px);background:#82170f}
+.delivery-banner-order span{font-size:1.05em}
+@media(max-width:600px){.delivery-banner-brand{left:2.5%;top:3%;gap:6px;padding:4px 8px 4px 5px;border-radius:8px}.delivery-banner-mark{width:24px;height:24px;border-radius:6px;font-size:.52rem}.delivery-banner-brand strong{font-size:.57rem}.delivery-banner-brand small{font-size:.38rem;letter-spacing:.65px}.delivery-banner-order{left:17%;bottom:3%;padding:7px 12px;border-width:1px;gap:6px;font-size:.62rem}}
