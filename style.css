@@ -1391,3 +1391,6 @@ body.category-page-mode #shop .section-head{margin-top:0}
 
 /* Keep sections hidden by the category-page router out of the layout. */
 main>section[hidden]{display:none!important}
+
+/* The hero slider has its own important display rule; hide routed-out sections explicitly. */
+body.category-page-mode main>section[hidden]{display:none!important}
