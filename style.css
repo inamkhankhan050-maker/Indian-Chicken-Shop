@@ -1394,3 +1394,6 @@ main>section[hidden]{display:none!important}
 
 /* The hero slider has its own important display rule; hide routed-out sections explicitly. */
 body.category-page-mode main>section[hidden]{display:none!important}
+
+/* Phone layout: keep the header compact and bring the chicken heading closer to categories. */
+@media(max-width:760px){.nav nav{display:none!important}.category-strip{padding-top:28px!important;padding-bottom:22px!important}.category-heading{margin-bottom:14px!important}#shop.section{padding-top:30px!important}}
