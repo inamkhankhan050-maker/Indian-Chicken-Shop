@@ -1225,3 +1225,15 @@ body{background:#fff;color:#202923}
 
 /* Mask only the left text/button fragments, leaving the right-side food and hygiene artwork clear. */
 .delivery-banner-overlay::before,.delivery-banner-overlay::after{width:35%}
+
+
+/* Premium ICS monogram with a hen emblem */
+.brand-mark{position:relative;background:linear-gradient(145deg,#173f32,#0b2a22)!important;border:1px solid #d8b76b;box-shadow:0 8px 24px rgba(12,42,34,.28),inset 0 0 0 2px rgba(255,255,255,.08)}
+.brand-ics{color:#fff;font-size:.86rem;letter-spacing:-.06em}
+.brand-chicken{position:absolute;right:-6px;bottom:-6px;width:23px;height:23px;display:grid;place-items:center;border:2px solid #fff;border-radius:50%;background:#f2644f;font-size:.83rem;line-height:1;box-shadow:0 3px 8px rgba(0,0,0,.22)}
+.delivery-banner-mark{position:relative;width:38px;height:38px;border-radius:10px;background:linear-gradient(145deg,#173f32,#0b2a22);border:1px solid #d8b76b;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.08);font:900 .62rem Manrope,Arial,sans-serif}
+.delivery-banner-mark b{font-weight:900;letter-spacing:-.04em}
+.delivery-banner-mark i{position:absolute;right:-5px;bottom:-5px;width:19px;height:19px;display:grid;place-items:center;border:1.5px solid #fff;border-radius:50%;background:#f2644f;font-style:normal;font-size:.68rem;line-height:1;box-shadow:0 2px 5px rgba(0,0,0,.2)}
+.delivery-banner-brand{border:1px solid rgba(216,183,107,.55);box-shadow:0 5px 16px rgba(17,42,33,.16)}
+.delivery-banner-order{background:linear-gradient(135deg,#a41f16,#cf4937);border-color:#f4d99a;box-shadow:0 7px 20px rgba(60,24,14,.28)}
+@media(max-width:600px){.brand-chicken{width:20px;height:20px;font-size:.72rem}.delivery-banner-mark{width:32px;height:32px;border-radius:8px}}
