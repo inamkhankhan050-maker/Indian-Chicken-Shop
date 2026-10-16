@@ -1221,3 +1221,7 @@ body{background:#fff;color:#202923}
 /* Keep any clipped letters from the source artwork out of the clean title bands. */
 .delivery-banner-overlay::before{height:16%;background:linear-gradient(180deg,#fff 0%,#fff 92%,rgba(255,255,255,0) 100%)}
 .delivery-banner-overlay::after{height:12%;background:linear-gradient(0deg,#fff 0%,#fff 92%,rgba(255,255,255,0) 100%)}
+
+
+/* Mask only the left text/button fragments, leaving the right-side food and hygiene artwork clear. */
+.delivery-banner-overlay::before,.delivery-banner-overlay::after{width:35%}
