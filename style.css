@@ -1403,3 +1403,7 @@ body.category-page-mode main>section[hidden]{display:none!important}
 
 /* Keep the mobile category nav from overlaying hero artwork; category cards remain on every page. */
 @media(max-width:760px){.header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}}
+
+/* Mobile header repair: one compact row, no full-width link strip or wrapped order button. */
+@media(max-width:1050px){.header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}}
+@media(max-width:760px){.header .nav{height:68px!important;min-height:68px!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;padding:0!important}.header .nav>.brand{flex:1 1 auto!important;min-width:0!important;max-width:calc(100% - 76px)!important;margin:0!important}.header .nav>.nav-order{display:none!important}.header .nav>.nav-cart{flex:0 0 auto!important}}
