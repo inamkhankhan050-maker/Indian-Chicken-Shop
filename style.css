@@ -1211,3 +1211,8 @@ body{background:#fff;color:#202923}
 .delivery-banner-overlay::before{top:0;height:9%;background:linear-gradient(180deg,#fff 0%,#fff 68%,rgba(255,255,255,0) 100%)}
 .delivery-banner-overlay::after{bottom:0;height:9%;background:linear-gradient(0deg,#fff 0%,#fff 58%,rgba(255,255,255,0) 100%)}
 .delivery-banner-brand,.delivery-banner-order{z-index:2}
+
+
+/* Hide the clipped source text fully while keeping the added brand and CTA above it. */
+.delivery-banner-overlay::before{height:13%}
+.delivery-banner-overlay::after{height:10%}
