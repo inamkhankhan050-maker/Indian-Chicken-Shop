@@ -1204,3 +1204,10 @@ body{background:#fff;color:#202923}
 .delivery-banner-order:hover{transform:translateY(-2px);background:#82170f}
 .delivery-banner-order span{font-size:1.05em}
 @media(max-width:600px){.delivery-banner-brand{left:2.5%;top:3%;gap:6px;padding:4px 8px 4px 5px;border-radius:8px}.delivery-banner-mark{width:24px;height:24px;border-radius:6px;font-size:.52rem}.delivery-banner-brand strong{font-size:.57rem}.delivery-banner-brand small{font-size:.38rem;letter-spacing:.65px}.delivery-banner-order{left:17%;bottom:3%;padding:7px 12px;border-width:1px;gap:6px;font-size:.62rem}}
+
+
+/* Clean the cut-off print at the top and bottom of the delivery artwork. */
+.delivery-banner-overlay::before,.delivery-banner-overlay::after{content:"";position:absolute;left:0;width:100%;pointer-events:none;z-index:1}
+.delivery-banner-overlay::before{top:0;height:9%;background:linear-gradient(180deg,#fff 0%,#fff 68%,rgba(255,255,255,0) 100%)}
+.delivery-banner-overlay::after{bottom:0;height:9%;background:linear-gradient(0deg,#fff 0%,#fff 58%,rgba(255,255,255,0) 100%)}
+.delivery-banner-brand,.delivery-banner-order{z-index:2}
