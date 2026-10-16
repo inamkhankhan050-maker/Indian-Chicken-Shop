@@ -1406,3 +1406,9 @@ body.category-page-mode main>section[hidden]{display:none!important}
 /* Mobile header repair: one compact row, no full-width link strip or wrapped order button. */
 @media(max-width:1050px){.header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}}
 @media(max-width:760px){.header .nav{height:68px!important;min-height:68px!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;padding:0!important}.header .nav>.brand{flex:1 1 auto!important;min-width:0!important;max-width:calc(100% - 76px)!important;margin:0!important}.header .nav>.nav-order{display:none!important}.header .nav>.nav-cart{flex:0 0 auto!important}}
+
+/* Mobile category taps land directly on the selected product section. */
+body.category-page-mode main>section:not(#category-page-title){scroll-margin-top:84px}
+@media(max-width:760px){body.category-page-mode main>section:not(#category-page-title){scroll-margin-top:74px}}
+/* Highest-priority compact-screen rule prevents the legacy horizontal nav strip from covering the hero. */
+@media(max-width:1050px){html body header.header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}}
