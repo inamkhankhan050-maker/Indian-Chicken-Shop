@@ -1216,3 +1216,8 @@ body{background:#fff;color:#202923}
 /* Hide the clipped source text fully while keeping the added brand and CTA above it. */
 .delivery-banner-overlay::before{height:13%}
 .delivery-banner-overlay::after{height:10%}
+
+
+/* Keep any clipped letters from the source artwork out of the clean title bands. */
+.delivery-banner-overlay::before{height:16%;background:linear-gradient(180deg,#fff 0%,#fff 92%,rgba(255,255,255,0) 100%)}
+.delivery-banner-overlay::after{height:12%;background:linear-gradient(0deg,#fff 0%,#fff 92%,rgba(255,255,255,0) 100%)}
