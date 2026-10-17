@@ -1450,3 +1450,12 @@ body.category-page-mode main>section:not(#category-page-title){scroll-margin-top
 }
 
 #kabab .kabab-image-placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:12px;background:linear-gradient(145deg,#eef4ee,#dce9df);color:#718078;font:800 .72rem 'DM Sans',Arial,sans-serif;letter-spacing:1px;text-align:center}
+
+
+/* Mobile navigation: show the main category links below the compact header row. */
+@media(max-width:760px){
+  .header .nav{height:auto!important;min-height:68px!important;flex-wrap:wrap!important;padding-bottom:0!important}
+  html body header.header .nav>nav[aria-label="Main navigation"]{display:flex!important;visibility:visible!important;position:static!important;width:calc(100% + 32px)!important;height:auto!important;flex:0 0 calc(100% + 32px)!important;order:3!important;margin:0 -16px!important;padding:0 16px 8px!important;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap!important;border-top:1px solid #3a3b3e!important;background:#202124!important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .header .nav>nav[aria-label="Main navigation"]::-webkit-scrollbar{display:none}
+  .header .nav>nav[aria-label="Main navigation"] a{display:inline-flex!important;align-items:center!important;flex:0 0 auto!important;min-height:38px!important;white-space:nowrap!important}
+}
