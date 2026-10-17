@@ -1448,3 +1448,5 @@ body.category-page-mode main>section:not(#category-page-title){scroll-margin-top
   #kabab .kabab-product-grid .product-body p{min-height:50px;font-size:.63rem}
   #kabab .kabab-product-grid .product-rating small{font-size:.54rem}
 }
+
+#kabab .kabab-image-placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:12px;background:linear-gradient(145deg,#eef4ee,#dce9df);color:#718078;font:800 .72rem 'DM Sans',Arial,sans-serif;letter-spacing:1px;text-align:center}
