@@ -1459,3 +1459,39 @@ body.category-page-mode main>section:not(#category-page-title){scroll-margin-top
   .header .nav>nav[aria-label="Main navigation"]::-webkit-scrollbar{display:none}
   .header .nav>nav[aria-label="Main navigation"] a{display:inline-flex!important;align-items:center!important;flex:0 0 auto!important;min-height:38px!important;white-space:nowrap!important}
 }
+
+
+/* Fish product cards use the same quantity and cart controls as Chicken and Kabab. */
+#fish-menu .fish-product-grid{align-items:stretch!important;grid-auto-rows:1fr;gap:16px!important}
+#fish-menu .fish-product-grid .product-card{display:flex;flex-direction:column;height:100%;min-width:0}
+#fish-menu .fish-product-grid .product-body{display:flex;flex:1;flex-direction:column;padding:14px 15px 15px}
+#fish-menu .fish-product-grid .product-body p{min-height:48px;margin:7px 0 10px;line-height:1.45}
+#fish-menu .fish-product-grid .cart-add-row{display:grid;grid-template-columns:minmax(86px,.72fr) minmax(112px,1fr);align-items:end;gap:8px;margin-top:auto;padding-top:10px}
+#fish-menu .cart-quantity-label{display:flex;flex-direction:column;gap:4px;color:#718078;font-size:.65rem;font-weight:800}
+#fish-menu .cart-quantity{width:100%;min-height:42px;padding:0 9px;border:1px solid #dfe5df;border-radius:8px;background:#fff;color:#20392f;font:700 .78rem 'DM Sans',Arial,sans-serif}
+#fish-menu .add-to-cart{min-height:42px;padding:0 10px;border:0;border-radius:8px;background:#f2644f;color:#fff;font:800 .76rem 'DM Sans',Arial,sans-serif;cursor:pointer;transition:background .15s ease,transform .15s ease;display:flex;align-items:center;justify-content:center;text-align:center}
+#fish-menu .add-to-cart:hover{background:#d94e3a;transform:translateY(-1px)}
+@media(max-width:760px){#fish-menu .fish-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}}
+@media(max-width:600px){
+  #fish-menu .fish-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  #fish-menu .fish-product-grid .product-photo{height:132px!important;flex-basis:132px}
+  #fish-menu .fish-product-grid .product-body{padding:10px 9px 11px}
+  #fish-menu .fish-product-grid .product-body h3{font-size:.84rem;line-height:1.25}
+  #fish-menu .fish-product-grid .product-body p{min-height:54px;margin:6px 0 8px;font-size:.67rem;line-height:1.35}
+  #fish-menu .fish-product-grid .product-rating{gap:5px}
+  #fish-menu .fish-product-grid .product-rating>span{font-size:.9rem;letter-spacing:-1px}
+  #fish-menu .fish-product-grid .product-rating small{font-size:.58rem}
+  #fish-menu .fish-product-grid .product-price-line{margin:8px 0 9px;gap:5px}
+  #fish-menu .fish-product-grid .product-price-line strong{font-size:.9rem}
+  #fish-menu .fish-product-grid .product-price-line>span{font-size:.62rem}
+  #fish-menu .fish-product-grid .cart-add-row{grid-template-columns:1fr;gap:6px;padding-top:7px}
+  #fish-menu .cart-quantity-label{gap:3px;font-size:.6rem}
+  #fish-menu .cart-quantity,#fish-menu .add-to-cart{min-height:36px;font-size:.68rem}
+}
+@media(max-width:360px){
+  #fish-menu .fish-product-grid{gap:8px!important}
+  #fish-menu .fish-product-grid .product-photo{height:116px!important;flex-basis:116px}
+  #fish-menu .fish-product-grid .product-body{padding:9px 7px}
+  #fish-menu .fish-product-grid .product-body p{min-height:50px;font-size:.63rem}
+  #fish-menu .fish-product-grid .product-rating small{font-size:.54rem}
+}
