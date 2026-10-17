@@ -608,7 +608,7 @@ body.category-page-mode main>section:not(#category-page-title){scroll-margin-top
  .topbar-inner{gap:8px;font-size:.59rem}
  .header .brand{gap:8px}
  .header .nav-cart{min-height:38px;padding:0 9px;gap:5px;font-size:.72rem}
- .order-cart{top:76px;right:10px;width:calc(100vw - 20px);max-height:calc(100dvh - 88px);padding:15px}
+ .order-cart{right:10px;width:calc(100vw - 20px);padding:15px}
  .cart-item{grid-template-columns:minmax(0,1fr) 50px 70px 50px;gap:6px;padding:9px 7px;font-size:.66rem}
  .cart-actions{gap:8px}
  .cart-checkout{padding:0 11px;font-size:.72rem}
