@@ -215,49 +215,6 @@ body{background:#fff;color:#202923}
 @media(max-width:760px){.floating-whatsapp{right:15px;bottom:88px;width:54px;height:54px}.floating-whatsapp svg{width:31px;height:31px}}
 
 
-/* Clear, prominent store navigation inspired by the reference layout */
-.nav nav{display:flex;align-items:center;gap:clamp(14px,1.7vw,27px);margin-left:auto}
-.nav nav a{font-size:.9rem;font-weight:800;letter-spacing:.01em;color:#29483c;white-space:nowrap;padding:10px 0}
-.nav nav a:hover{color:#08785a}
-@media(max-width:1050px){.nav{gap:14px}.nav nav{gap:16px}.nav nav a{font-size:.82rem}}
-@media(max-width:760px){
- .header{height:auto}
- .nav{height:auto;min-height:68px;flex-wrap:wrap;gap:0;padding-top:10px;padding-bottom:0}
- .brand{max-width:calc(100% - 126px);font-size:.9rem;gap:8px}
- .brand small{font-size:.5rem;letter-spacing:1px}
- .brand-mark{width:44px;height:44px;flex:0 0 44px}
- .nav-order{margin-left:auto;max-width:124px;font-size:.62rem;padding:10px 9px}
- .nav nav{order:3;display:flex!important;flex:0 0 calc(100% + 36px);width:calc(100% + 36px);margin:9px -18px 0;padding:0 18px 10px;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;border-top:1px solid #e7e9e0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
- .nav nav::-webkit-scrollbar{display:none}
- .nav nav a{display:inline-flex;align-items:center;min-height:38px;font-size:.84rem;font-weight:800;flex:0 0 auto}
-}
-
-
-/* Dark premium butcher-shop header: original ICS branding, not a copied logo */
-:root{--ics-charcoal:#202124;--ics-orange:#ef6048;--ics-cream:#fffaf4}
-.topbar{background:#151618;color:#d7d7d7;border-bottom:1px solid #303135}
-.topbar-inner{min-height:34px;font-size:.69rem;letter-spacing:.045em}
-.topbar-inner a{color:#fff;font-weight:700}
-.header{background:var(--ics-charcoal);color:#fff;border-bottom:3px solid var(--ics-orange);box-shadow:0 5px 20px #0000001c}
-.nav{color:#fff}
-.brand{color:#fff;font-family:Manrope,'DM Sans',sans-serif;font-weight:800;letter-spacing:-.035em}
-.brand:hover{color:#fff}
-.brand-mark{background:var(--ics-orange);color:#fff;border-radius:5px;font-family:Manrope,sans-serif;font-size:1rem;font-weight:800;letter-spacing:-.04em;box-shadow:inset 0 -3px 0 #0000001a}
-.brand small{color:#c9c9c9;font-weight:700}
-.nav nav a{color:#f6f6f6;text-transform:uppercase;font-size:.78rem;letter-spacing:.045em;font-weight:800;transition:color .18s}
-.nav nav a:hover,.nav nav a:focus-visible{color:#ff765f}
-.nav nav a:focus-visible{outline:2px solid #ff765f;outline-offset:5px}
-.nav-order{background:var(--ics-orange);color:#fff;border:1px solid var(--ics-orange);font-weight:800;border-radius:4px;box-shadow:0 4px 12px #0002}
-.nav-order:hover{background:#d94b35;color:#fff}
-@media(max-width:760px){
- .topbar-inner{gap:8px;font-size:.59rem}
- .header{border-bottom-width:2px}
- .nav nav{background:#202124;border-top:1px solid #3a3b3e}
- .nav nav a{font-size:.78rem;color:#fff}
- .nav nav a:hover{color:#ff765f}
-}
-
-
 /* Premium ICS wordmark */
 .brand{display:flex;align-items:center;gap:12px;flex-shrink:0;text-decoration:none}
 .brand-mark{width:48px;height:48px;display:grid;place-items:center;font-size:1rem;letter-spacing:-.06em;border:1px solid #ff8a72;position:relative}
@@ -301,52 +258,6 @@ body{background:#fff;color:#202923}
 @media(max-width:760px){.category-strip{padding:42px 0 48px}.category-heading{margin-bottom:20px}.category-strip .category-grid{gap:14px}.category-strip .category-card span{font-size:.9rem}}
 @media(max-width:520px){.category-strip .category-card img{height:155px}.category-strip .category-grid{gap:12px}.category-strip .category-card span{font-size:.82rem}}
 
-
-
-/* Visible brand and CTA over the cropped delivery artwork */
-.delivery-banner-slide{position:absolute}
-.delivery-banner-overlay{position:absolute;inset:0;z-index:4;pointer-events:none}
-.delivery-banner-brand{position:absolute;left:3.2%;top:4%;display:flex;align-items:center;gap:9px;padding:6px 12px 6px 7px;border-radius:10px;background:rgba(255,255,255,.96);box-shadow:0 2px 12px rgba(24,56,44,.13);color:#173e31}
-.delivery-banner-mark{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;background:#f2644f;color:#fff;font:900 .62rem 'DM Sans',Arial,sans-serif;letter-spacing:.2px}
-.delivery-banner-brand strong{display:block;font:900 clamp(.64rem,1.35vw,1rem) Manrope,Arial,sans-serif;line-height:1.1;letter-spacing:.25px;white-space:nowrap}
-.delivery-banner-brand small{display:block;margin-top:3px;color:#68786f;font:800 clamp(.42rem,.65vw,.52rem) 'DM Sans',Arial,sans-serif;letter-spacing:1px;white-space:nowrap}
-.delivery-banner-order{position:absolute;left:17.8%;bottom:4%;pointer-events:auto;display:inline-flex;align-items:center;gap:9px;padding:10px 19px;border:2px solid #fff;border-radius:999px;background:#a41f16;color:#fff;text-decoration:none;font:900 clamp(.68rem,1vw,.82rem) 'DM Sans',Arial,sans-serif;box-shadow:0 6px 18px rgba(50,20,14,.24);transition:transform .18s ease,background .18s ease}
-.delivery-banner-order:hover{transform:translateY(-2px);background:#82170f}
-.delivery-banner-order span{font-size:1.05em}
-@media(max-width:600px){.delivery-banner-brand{left:2.5%;top:3%;gap:6px;padding:4px 8px 4px 5px;border-radius:8px}.delivery-banner-mark{width:24px;height:24px;border-radius:6px;font-size:.52rem}.delivery-banner-brand strong{font-size:.57rem}.delivery-banner-brand small{font-size:.38rem;letter-spacing:.65px}.delivery-banner-order{left:17%;bottom:3%;padding:7px 12px;border-width:1px;gap:6px;font-size:.62rem}}
-
-
-/* Clean the cut-off print at the top and bottom of the delivery artwork. */
-.delivery-banner-overlay::before,.delivery-banner-overlay::after{content:"";position:absolute;left:0;width:100%;pointer-events:none;z-index:1}
-.delivery-banner-overlay::before{top:0;height:9%;background:linear-gradient(180deg,#fff 0%,#fff 68%,rgba(255,255,255,0) 100%)}
-.delivery-banner-overlay::after{bottom:0;height:9%;background:linear-gradient(0deg,#fff 0%,#fff 58%,rgba(255,255,255,0) 100%)}
-.delivery-banner-brand,.delivery-banner-order{z-index:2}
-
-
-/* Hide the clipped source text fully while keeping the added brand and CTA above it. */
-.delivery-banner-overlay::before{height:13%}
-.delivery-banner-overlay::after{height:10%}
-
-
-/* Keep any clipped letters from the source artwork out of the clean title bands. */
-.delivery-banner-overlay::before{height:16%;background:linear-gradient(180deg,#fff 0%,#fff 92%,rgba(255,255,255,0) 100%)}
-.delivery-banner-overlay::after{height:12%;background:linear-gradient(0deg,#fff 0%,#fff 92%,rgba(255,255,255,0) 100%)}
-
-
-/* Mask only the left text/button fragments, leaving the right-side food and hygiene artwork clear. */
-.delivery-banner-overlay::before,.delivery-banner-overlay::after{width:35%}
-
-
-/* Premium ICS monogram with a hen emblem */
-.brand-mark{position:relative;background:linear-gradient(145deg,#173f32,#0b2a22)!important;border:1px solid #d8b76b;box-shadow:0 8px 24px rgba(12,42,34,.28),inset 0 0 0 2px rgba(255,255,255,.08)}
-.brand-ics{color:#fff;font-size:.86rem;letter-spacing:-.06em}
-.brand-chicken{position:absolute;right:-6px;bottom:-6px;width:23px;height:23px;display:grid;place-items:center;border:2px solid #fff;border-radius:50%;background:#f2644f;font-size:.83rem;line-height:1;box-shadow:0 3px 8px rgba(0,0,0,.22)}
-.delivery-banner-mark{position:relative;width:38px;height:38px;border-radius:10px;background:linear-gradient(145deg,#173f32,#0b2a22);border:1px solid #d8b76b;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.08);font:900 .62rem Manrope,Arial,sans-serif}
-.delivery-banner-mark b{font-weight:900;letter-spacing:-.04em}
-.delivery-banner-mark i{position:absolute;right:-5px;bottom:-5px;width:19px;height:19px;display:grid;place-items:center;border:1.5px solid #fff;border-radius:50%;background:#f2644f;font-style:normal;font-size:.68rem;line-height:1;box-shadow:0 2px 5px rgba(0,0,0,.2)}
-.delivery-banner-brand{border:1px solid rgba(216,183,107,.55);box-shadow:0 5px 16px rgba(17,42,33,.16)}
-.delivery-banner-order{background:linear-gradient(135deg,#a41f16,#cf4937);border-color:#f4d99a;box-shadow:0 7px 20px rgba(60,24,14,.28)}
-@media(max-width:600px){.brand-chicken{width:20px;height:20px;font-size:.72rem}.delivery-banner-mark{width:32px;height:32px;border-radius:8px}}
 
 
 /* Premium homepage trust row */
@@ -449,10 +360,7 @@ body{background:#fff;color:#202923}
 .cart-checkout:disabled,.cart-clear:disabled{opacity:.45;cursor:not-allowed}
 .cart-empty{margin:0;padding:22px 12px;text-align:center;color:#718078;font-size:.86rem}
 body.cart-open{overflow:hidden}
-@media(max-width:1150px){.nav{gap:12px}.nav nav{gap:14px}.nav nav a{font-size:.7rem}.nav-order{padding:11px 12px;font-size:.69rem}}
-@media(max-width:850px){.nav{gap:9px}.nav nav{display:none}.brand{margin-right:auto}.nav-cart{min-height:40px;padding:0 10px}.nav-order{padding:10px 12px}}
-@media(max-width:520px){.nav{height:66px;gap:8px}.brand{gap:8px}.brand-mark{width:39px;height:39px}.brand-name{font-size:.82rem}.brand small{font-size:.48rem;letter-spacing:.9px}.nav-cart{min-height:38px;padding:0 9px;gap:5px;font-size:.72rem}.nav-order{padding:10px 9px;font-size:.65rem;border-radius:9px}.order-cart{top:76px;right:10px;width:calc(100vw - 20px);max-height:calc(100dvh - 88px);padding:15px}.cart-item{grid-template-columns:minmax(0,1fr) 50px 70px 50px;gap:6px;padding:9px 7px;font-size:.66rem}.cart-actions{gap:8px}.cart-checkout{padding:0 11px;font-size:.72rem}}
-@media(max-width:380px){.brand-name{font-size:.72rem}.brand small{font-size:.42rem}.nav-order{font-size:.6rem;padding:9px 7px}.nav-cart-label{display:none}}
+@media(max-width:520px){.cart-item{grid-template-columns:minmax(0,1fr) 50px 70px 50px;gap:6px;padding:9px 7px;font-size:.66rem}.cart-actions{gap:8px}.cart-checkout{padding:0 11px;font-size:.72rem}}
 
 
 /* Two product cards per row on phones */
@@ -506,22 +414,18 @@ main>section[hidden]{display:none!important}
 body.category-page-mode main>section[hidden]{display:none!important}
 
 /* Phone layout: keep the header compact and bring the chicken heading closer to categories. */
-@media(max-width:760px){.nav nav{display:none!important}.category-strip{padding-top:28px!important;padding-bottom:22px!important}.category-heading{margin-bottom:14px!important}#shop.section{padding-top:30px!important}}
+@media(max-width:760px){.category-strip{padding-top:28px!important;padding-bottom:22px!important}.category-heading{margin-bottom:14px!important}#shop.section{padding-top:30px!important}}
 
 /* Main navigation stays hidden on compact screens; category cards provide mobile navigation. */
 
 /* Keep the mobile category nav from overlaying hero artwork; category cards remain on every page. */
-@media(max-width:760px){.header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}}
 
 /* Mobile header repair: one compact row, no full-width link strip or wrapped order button. */
-@media(max-width:1050px){.header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}}
-@media(max-width:760px){.header .nav{height:68px!important;min-height:68px!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;padding:0!important}.header .nav>.brand{flex:1 1 auto!important;min-width:0!important;max-width:calc(100% - 76px)!important;margin:0!important}.header .nav>.nav-order{display:none!important}.header .nav>.nav-cart{flex:0 0 auto!important}}
 
 /* Mobile category taps land directly on the selected product section. */
-body.category-page-mode main>section:not(#category-page-title){scroll-margin-top:84px}
-@media(max-width:760px){body.category-page-mode main>section:not(#category-page-title){scroll-margin-top:74px}}
+body.category-page-mode main>section:not(#category-page-title){scroll-margin-top:142px}
+@media(max-width:760px){body.category-page-mode main>section:not(#category-page-title){scroll-margin-top:154px}}
 /* Highest-priority compact-screen rule prevents the legacy horizontal nav strip from covering the hero. */
-@media(max-width:1050px){html body header.header .nav>nav[aria-label="Main navigation"]{display:none!important;visibility:hidden!important;position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important}}
 
 /* Kabab cards mirror the chicken product-card layout. */
 #kabab .kabab-product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px;align-items:stretch}
@@ -560,15 +464,6 @@ body.category-page-mode main>section:not(#category-page-title){scroll-margin-top
 }
 
 #kabab .kabab-image-placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:12px;background:linear-gradient(145deg,#eef4ee,#dce9df);color:#718078;font:800 .72rem 'DM Sans',Arial,sans-serif;letter-spacing:1px;text-align:center}
-
-
-/* Mobile navigation: show the main category links below the compact header row. */
-@media(max-width:760px){
-  .header .nav{height:auto!important;min-height:68px!important;flex-wrap:wrap!important;padding-bottom:0!important}
-  html body header.header .nav>nav[aria-label="Main navigation"]{display:flex!important;visibility:visible!important;position:static!important;width:calc(100% + 32px)!important;height:auto!important;flex:0 0 calc(100% + 32px)!important;order:3!important;margin:0 -16px!important;padding:0 16px 8px!important;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap!important;border-top:1px solid #3a3b3e!important;background:#202124!important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .header .nav>nav[aria-label="Main navigation"]::-webkit-scrollbar{display:none}
-  .header .nav>nav[aria-label="Main navigation"] a{display:inline-flex!important;align-items:center!important;flex:0 0 auto!important;min-height:38px!important;white-space:nowrap!important}
-}
 
 
 /* Fish product cards use the same quantity and cart controls as Chicken and Kabab. */
@@ -642,26 +537,86 @@ body.category-page-mode main>section:not(#category-page-title){scroll-margin-top
   #mutton-section .mutton-product-grid .product-rating small{font-size:.54rem}
 }
 
-/* Reference-inspired, two-tier store header with the existing ICS identity. */
-.header .nav{height:auto;min-height:0;display:grid;grid-template-columns:minmax(230px,1.15fr) minmax(125px,.55fr) minmax(220px,1fr) auto auto;grid-template-rows:76px 48px;gap:0 22px;align-items:center;padding-top:0;padding-bottom:0}
-.header .brand{grid-column:1;grid-row:1;min-width:0}
+
+/* Store header and reference-matched homepage frame. */
+:root{--ics-charcoal:#202124;--ics-orange:#ef6048;--ics-cream:#fffaf4}
+.topbar{background:#151618;color:#d7d7d7;border-bottom:1px solid #303135}
+.topbar-inner{min-height:34px;font-size:.69rem;letter-spacing:.045em}
+.topbar-inner a{color:#fff;font-weight:700}
+.header{position:sticky;top:0;z-index:50;background:var(--ics-charcoal);color:#fff;border-bottom:3px solid var(--ics-orange);box-shadow:0 5px 20px #0000001c}
+.header .nav{width:min(1500px,94%);height:auto;min-height:0;display:grid;grid-template-columns:minmax(240px,1.15fr) minmax(125px,.55fr) minmax(230px,1fr) auto auto;grid-template-rows:76px 48px;gap:0 22px;align-items:center;padding:0}
+.header .brand{grid-column:1;grid-row:1;min-width:0;color:#fff;font-family:Manrope,'DM Sans',sans-serif;font-weight:800;letter-spacing:-.035em}
+.header .brand:hover{color:#fff}
+.header .brand small{color:#c9c9c9;font-weight:700}
 .header-location{grid-column:2;grid-row:1;display:flex;align-items:center;gap:8px;color:#f6f6f6;font-size:.82rem;white-space:nowrap}
 .header-location>span:first-child{font-size:1.2rem}
 .header-location strong,.header-location small{display:block}
 .header-location small{color:#b8c1bd;font-size:.68rem}
 .header-search{grid-column:3;grid-row:1;position:relative;display:flex;min-width:0;height:42px;border-radius:5px;background:#fff;overflow:visible}
 .header-search input{width:100%;min-width:0;border:0;border-radius:5px;padding:0 44px 0 14px;color:#24332d;font:500 .88rem 'DM Sans',Arial,sans-serif;outline:none}
-.header-search input:focus-visible{box-shadow:0 0 0 3px #ef6048}
+.header-search input:focus-visible{box-shadow:0 0 0 3px var(--ics-orange)}
 .header-search button{position:absolute;right:0;top:0;width:42px;height:42px;border:0;border-radius:0 5px 5px 0;background:#f0f1ee;color:#24332d;font-size:1.5rem;cursor:pointer}
+.header-search button:hover{background:#e0e4df}
 .header-search-status{position:absolute;left:0;top:calc(100% + 7px);z-index:2;color:#fff;font-size:.72rem}
 .header .nav-cart{grid-column:4;grid-row:1}
-.header .nav-order{grid-column:5;grid-row:1}
-.header .nav>nav[aria-label="Main navigation"]{grid-column:1/-1;grid-row:2;display:flex!important;position:static!important;width:auto!important;height:auto!important;visibility:visible!important;align-self:stretch;margin:0!important;padding:0 2px!important;border-top:1px solid #3a3b3e;background:transparent;overflow:visible!important;justify-content:space-between;gap:clamp(12px,2vw,30px)}
-.header .nav>nav[aria-label="Main navigation"] a{min-height:0;padding:0;flex:0 0 auto;font-size:.77rem;letter-spacing:.04em}
+.header .nav-order{grid-column:5;grid-row:1;background:var(--ics-orange);color:#fff;border:1px solid var(--ics-orange);font-weight:800;border-radius:4px;box-shadow:0 4px 12px #0002}
+.header .nav-order:hover{background:#d94b35;color:#fff}
+.header .nav>nav[aria-label="Main navigation"]{grid-column:1/-1;grid-row:2;display:flex;position:static;width:auto;height:auto;visibility:visible;align-self:stretch;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,30px);margin:0;padding:0 2px;border-top:1px solid #3a3b3e;background:transparent;overflow:visible}
+.header .nav>nav[aria-label="Main navigation"] a{display:inline-flex;align-items:center;flex:0 0 auto;min-height:0;padding:0;color:#f6f6f6;text-transform:uppercase;font-size:.77rem;letter-spacing:.045em;font-weight:800;white-space:nowrap;transition:color .18s}
+.header .nav>nav[aria-label="Main navigation"] a:hover,.header .nav>nav[aria-label="Main navigation"] a:focus-visible{color:#ff765f}
+.header .nav>nav[aria-label="Main navigation"] a:focus-visible{outline:2px solid #ff765f;outline-offset:5px}
+.header .nav>nav[aria-label="Main navigation"]::-webkit-scrollbar{display:none}
 .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-.product-card.search-match{outline:4px solid #ef6048;outline-offset:3px;box-shadow:0 0 0 8px #ef604822}
+.product-card.search-match{outline:4px solid var(--ics-orange);outline-offset:3px;box-shadow:0 0 0 8px #ef604822}
+.category-wrap{width:min(1500px,94%)}
 .category-strip{padding-top:38px}
-@media(max-width:1100px){.header .nav{grid-template-columns:minmax(210px,1fr) minmax(165px,.8fr) auto auto;gap:0 14px}.header-location{display:none}.header-search{grid-column:2}.header .nav-cart{grid-column:3}.header .nav-order{grid-column:4}.header .nav>nav[aria-label="Main navigation"]{gap:clamp(10px,1.5vw,20px)}.header .nav>nav[aria-label="Main navigation"] a{font-size:.7rem}}
-@media(max-width:850px){.header .nav{grid-template-columns:minmax(180px,1fr) minmax(150px,.8fr) auto;gap:0 10px}.header-search{grid-column:2}.header .nav-cart{grid-column:3}.header .nav-order{display:none}.header .nav>nav[aria-label="Main navigation"]{gap:18px}}
-@media(max-width:760px){.header .nav{height:auto!important;min-height:0!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-rows:66px 42px 42px!important;flex-wrap:initial!important;gap:0 8px!important;padding:0!important}.header .nav>.brand{grid-column:1!important;grid-row:1!important;max-width:100%!important}.header-location{display:none!important}.header .nav>.nav-cart{grid-column:2!important;grid-row:1!important}.header .nav>.nav-order{display:none!important}.header .nav>nav[aria-label="Main navigation"]{grid-column:1/-1!important;grid-row:2!important;display:flex!important;visibility:visible!important;position:static!important;width:auto!important;height:auto!important;flex:initial!important;align-self:stretch!important;overflow-x:auto!important;overflow-y:hidden!important;justify-content:flex-start!important;gap:24px!important;margin:0!important;padding:0 2px!important;border-top:1px solid #3a3b3e!important;background:transparent!important}.header .nav>nav[aria-label="Main navigation"] a{min-height:38px!important;font-size:.76rem!important}.header .header-search{grid-column:1/-1!important;grid-row:3!important;display:flex!important;height:36px!important;margin:2px 0 4px}.header .header-search input{font-size:.8rem}.header .header-search button{width:36px;height:36px}}
-@media(max-width:380px){.header .nav>nav[aria-label="Main navigation"]{gap:18px!important}.header .nav>nav[aria-label="Main navigation"] a{font-size:.7rem!important}}
+@media(max-width:1100px){
+ .header .nav{grid-template-columns:minmax(220px,1fr) minmax(210px,.9fr) auto auto;gap:0 16px}
+ .header-location{display:none}
+ .header-search{grid-column:2}
+ .header .nav-cart{grid-column:3}
+ .header .nav-order{grid-column:4;padding:11px 12px;font-size:.69rem}
+ .header .nav>nav[aria-label="Main navigation"]{gap:clamp(10px,1.5vw,20px)}
+ .header .nav>nav[aria-label="Main navigation"] a{font-size:.7rem}
+}
+@media(max-width:850px){
+ .header .nav{grid-template-columns:minmax(190px,1fr) minmax(180px,.85fr) auto;gap:0 12px}
+ .header .nav-order{display:none}
+ .header .nav>nav[aria-label="Main navigation"]{gap:14px}
+}
+@media(max-width:760px){
+ .topbar{display:none}
+ .header{border-bottom-width:2px}
+ .header .nav{grid-template-columns:minmax(0,1fr) auto;grid-template-rows:66px 42px 42px;gap:0 8px}
+ .header .brand{grid-column:1;grid-row:1;max-width:100%;gap:9px}
+ .header .brand-mark{width:42px;height:42px;font-size:.9rem}
+ .header .brand-name{font-size:clamp(.78rem,3.3vw,1rem);letter-spacing:.01em}
+ .header .brand-copy small{font-size:.49rem;letter-spacing:.13em}
+ .header-location{display:none}
+ .header .nav-cart{grid-column:2;grid-row:1;min-height:40px;padding:0 10px}
+ .header .nav-order{display:none}
+ .header .nav>nav[aria-label="Main navigation"]{grid-column:1/-1;grid-row:2;align-self:stretch;justify-content:flex-start;gap:24px;margin:0;padding:0 2px;border-top:1px solid #3a3b3e;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .header .nav>nav[aria-label="Main navigation"] a{min-height:38px;font-size:.76rem}
+ .header .header-search{grid-column:1/-1;grid-row:3;display:flex;height:36px;margin:2px 0 4px}
+ .header .header-search input{font-size:.8rem}
+ .header .header-search button{width:36px;height:36px}
+ .category-strip{padding-top:28px!important;padding-bottom:22px!important}
+ .category-heading{margin-bottom:14px!important}
+ #shop.section{padding-top:30px!important}
+}
+@media(max-width:520px){
+ .topbar-inner{gap:8px;font-size:.59rem}
+ .header .brand{gap:8px}
+ .header .nav-cart{min-height:38px;padding:0 9px;gap:5px;font-size:.72rem}
+ .order-cart{right:10px;width:calc(100vw - 20px);padding:15px}
+ .cart-item{grid-template-columns:minmax(0,1fr) 50px 70px 50px;gap:6px;padding:9px 7px;font-size:.66rem}
+ .cart-actions{gap:8px}
+ .cart-checkout{padding:0 11px;font-size:.72rem}
+}
+@media(max-width:380px){
+ .header .brand-name{font-size:.72rem}
+ .header .brand-copy small{font-size:.42rem}
+ .header .nav-cart-label{display:none}
+ .header .nav>nav[aria-label="Main navigation"]{gap:18px}
+ .header .nav>nav[aria-label="Main navigation"] a{font-size:.7rem}
+}
