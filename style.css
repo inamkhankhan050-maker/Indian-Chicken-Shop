@@ -54,6 +54,7 @@
 
 /* On-site reviews and moderation-ready feedback */
 .review-summary{display:flex;flex-direction:column;gap:5px;margin-top:26px;padding:17px 18px;background:#fff;border:1px solid #dce7dd;border-radius:14px;max-width:300px}
+.feedback-copy .review-summary{display:none!important}
 .review-summary strong{color:#173e31;font-size:1.05rem}.review-summary span{font-size:.78rem;color:#6b7d70}
 .feedback-status{font-size:.76rem!important;color:#60756b!important;line-height:1.55;margin:4px 0 0}
 .feedback-status.status-error{color:#a33224!important}.feedback-submit:disabled{opacity:.65;cursor:wait}
