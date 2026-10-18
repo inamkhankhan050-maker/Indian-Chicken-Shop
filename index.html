@@ -160,7 +160,134 @@
 <div class="contact-actions"><a href="tel:+919717290789">Call ↗</a><a href="https://wa.me/919717290789?text=Hello%2C%20I%27d%20like%20to%20order%20from%20Indian%20Chicken%20Shop." target="_blank" rel="noopener">WhatsApp ↗</a></div>
 </div></div></section>
 </main><footer><div class="container footer"><div><strong>Indian Chicken Shop</strong><span>Chicken · Kabab · Fish · Mutton · Since 2010</span></div><div><a href="tel:+918512875859">8512875859</a> · <a href="tel:+919717290789">9717290789</a></div></div></footer><a class="floating-whatsapp" href="https://wa.me/918512875859?text=Hello%2C%20I%27d%20like%20to%20order%20from%20Indian%20Chicken%20Shop." target="_blank" rel="noopener noreferrer" aria-label="Chat with Indian Chicken Shop on WhatsApp" title="WhatsApp Order" style="position:fixed!important;right:18px!important;bottom:22px!important;z-index:2147483000!important;width:58px!important;height:58px!important;display:flex!important;align-items:center!important;justify-content:center!important;border-radius:50%!important;background:#25D366!important;color:#fff!important;border:3px solid #fff!important;box-shadow:0 3px 14px rgba(0,0,0,.28)!important;text-decoration:none!important;"><svg viewBox="0 0 32 32" aria-hidden="true" style="width:34px!important;height:34px!important;display:block!important;fill:currentColor!important"><path d="M16.04 3C8.87 3 3.04 8.78 3.04 15.91c0 2.28.61 4.5 1.77 6.46L3 29l6.83-1.78a13.1 13.1 0 0 0 6.2 1.57h.01c7.17 0 13-5.79 13-12.91 0-3.45-1.35-6.69-3.81-9.12A12.94 12.94 0 0 0 16.04 3Zm0 23.58c-1.92 0-3.8-.51-5.43-1.48l-.39-.23-4.05 1.06 1.08-3.93-.26-.4a10.67 10.67 0 0 1-1.64-5.69c0-5.9 4.81-10.69 10.71-10.69 2.86 0 5.55 1.11 7.57 3.13a10.6 10.6 0 0 1 3.14 7.56c0 5.9-4.81 10.67-10.72 10.67Zm5.88-8c-.32-.16-1.9-.93-2.2-1.04-.3-.11-.51-.16-.73.16-.22.32-.84 1.04-1.03 1.25-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.63-1.62-.97-.86-1.62-1.92-1.81-2.24-.19-.32-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.32.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.74-1-2.38-.26-.62-.53-.54-.73-.55l-.62-.01c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.7 0 1.6 1.17 3.14 1.33 3.36.16.21 2.3 3.5 5.57 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.1 1.9-.78 2.17-1.54.27-.76.27-1.41.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg></a><div class="mobile-bar"><a href="tel:+918512875859">☎ Call 1</a><a href="tel:+919717290789">☎ Call 2</a><a href="https://wa.me/919717290789?text=Hello%2C%20I%27d%20like%20to%20order%20from%20Indian%20Chicken%20Shop." target="_blank" rel="noopener">💬 WhatsApp 2</a></div>
-<script>(()=>{const hero=document.querySelector('#home.hero-slider'),slides=[...document.querySelectorAll('.hero-slide')],dots=[...document.querySelectorAll('.hero-dot')],prev=document.querySelector('.hero-prev'),next=document.querySelector('.hero-next');if(!hero||!slides.length)return;let index=0,timer;function show(i){index=(i+slides.length)%slides.length;slides.forEach((s,n)=>{s.classList.toggle('active',n===index);s.setAttribute('aria-hidden',n===index?'false':'true')});dots.forEach((d,n)=>{d.classList.toggle('active',n===index);d.setAttribute('aria-pressed',n===index?'true':'false')})}function restart(){clearInterval(timer);if(!document.hidden)timer=setInterval(()=>show(index+1),4000)}prev?.addEventListener('click',()=>{show(index-1);restart()});next?.addEventListener('click',()=>{show(index+1);restart()});dots.forEach((d,n)=>d.addEventListener('click',()=>{show(n);restart()}));document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInterval(timer);else restart()});restart()})();const chickenCart=new Map();try{const savedCart=JSON.parse(localStorage.getItem('ics-shopping-cart-v1')||'[]');if(Array.isArray(savedCart))savedCart.forEach(item=>{if(item&&typeof item.name==='string'&&Number.isFinite(item.price)&&Number.isFinite(item.qty)&&item.qty>0)chickenCart.set(item.name,{name:item.name,price:item.price,qty:item.qty,unit:item.unit==='paya'?'paya':'kg'})})}catch{}const cartPanel=document.getElementById('chicken-cart');const cartItems=document.getElementById('chicken-cart-items');const cartCount=document.getElementById('chicken-cart-count');const cartTotal=document.getElementById('chicken-cart-total');const navCart=document.getElementById('nav-cart');const navCartCount=document.getElementById('nav-cart-count');const cartBackdrop=document.getElementById('chicken-cart-backdrop');const cartEmpty=document.getElementById('chicken-cart-empty');let cartOpen=false;function positionCartPanel(){const header=document.querySelector('.header');if(header){const top=Math.max(8,header.getBoundingClientRect().bottom+10);cartPanel.style.top=top+'px';cartPanel.style.maxHeight=Math.max(180,window.innerHeight-top-10)+'px'}}function setCartOpen(open){cartOpen=open;cartPanel.hidden=!open;cartBackdrop.hidden=!open;navCart.setAttribute('aria-expanded',String(open));document.body.classList.toggle('cart-open',open);if(open){positionCartPanel();document.getElementById('chicken-cart-close').focus()}}window.addEventListener('resize',()=>{if(cartOpen)positionCartPanel()});function formatCartQuantity(qty,unit='kg'){if(unit==='paya')return qty+' payas';if(qty===0.25)return '250 g';if(qty===0.5)return '500 g';if(qty===0.75)return '750 g';return qty+' kg'}function renderChickenCart(){const rows=[...chickenCart.values()];cartItems.replaceChildren();let total=0;for(const item of rows){const subtotal=item.price*item.qty;total+=subtotal;const row=document.createElement('div');row.className='cart-item';const label=document.createElement('span');label.textContent=item.name;const qty=document.createElement('small');qty.textContent=formatCartQuantity(item.qty,item.unit);const amount=document.createElement('strong');amount.textContent='₹'+subtotal.toFixed(2);const remove=document.createElement('button');remove.type='button';remove.className='cart-remove';remove.textContent='Remove';remove.setAttribute('aria-label','Remove '+item.name);remove.addEventListener('click',()=>{chickenCart.delete(item.name);renderChickenCart()});row.append(label,qty,amount,remove);cartItems.append(row)}cartCount.textContent=rows.length+' '+(rows.length===1?'item':'items');navCartCount.textContent=String(rows.length);cartTotal.textContent='₹'+total.toFixed(2);cartEmpty.hidden=rows.length>0;document.getElementById('chicken-cart-checkout').disabled=rows.length===0;document.getElementById('chicken-cart-clear').disabled=rows.length===0;try{localStorage.setItem('ics-shopping-cart-v1',JSON.stringify(rows))}catch{}}navCart.addEventListener('click',()=>setCartOpen(!cartOpen));document.getElementById('chicken-cart-close').addEventListener('click',()=>setCartOpen(false));cartBackdrop.addEventListener('click',()=>setCartOpen(false));document.addEventListener('keydown',event=>{if(event.key==='Escape'&&cartOpen){setCartOpen(false);navCart.focus()}});document.querySelectorAll('.add-to-cart').forEach(button=>button.addEventListener('click',()=>{const card=button.closest('.product-card');const name=button.dataset.product;const qty=Number(card.querySelector('.cart-quantity').value);const price=Number(button.dataset.price);const unit=card.querySelector('.cart-quantity').dataset.unit||'kg';const existing=chickenCart.get(name);chickenCart.set(name,{name,qty:qty+(existing?.qty||0),price,unit});renderChickenCart();button.textContent='Added ✓';setTimeout(()=>button.textContent='Add to Cart',1100)}));document.querySelectorAll('.kabab-ask-price').forEach(link=>link.addEventListener('click',()=>{const card=link.closest('.product-card');const qty=Number(card.querySelector('.cart-quantity').value);const weight=formatCartQuantity(qty);link.href='https://wa.me/918512875859?text='+encodeURIComponent('Hello, please share today\'s price and availability for '+link.dataset.product+' ('+weight+').')}));document.getElementById('chicken-cart-clear').addEventListener('click',()=>{chickenCart.clear();renderChickenCart()});document.getElementById('chicken-cart-checkout').addEventListener('click',()=>{if(!chickenCart.size)return;const rows=[...chickenCart.values()];const total=rows.reduce((sum,item)=>sum+item.price*item.qty,0);const lines=rows.map(item=>'- '+item.name+' — '+formatCartQuantity(item.qty,item.unit)+' (₹'+(item.price*item.qty).toFixed(2)+')');const message='Hello, I would like to order from Indian Chicken Shop:\n'+lines.join('\n')+'\nEstimated total: ₹'+total.toFixed(2)+'\nPlease confirm availability and delivery.';window.location.href='https://wa.me/918512875859?text='+encodeURIComponent(message)});renderChickenCart();const categoryViews={chicken:{label:'Chicken',section:'shop'},kabab:{label:'Ready-to-Cook Kabab',section:'kabab'},fish:{label:'Fish & Seafood',section:'fish-menu'},mutton:{label:'Mutton',section:'mutton-section'}};
+<script>(()=>{const hero=document.querySelector('#home.hero-slider'),slides=[...document.querySelectorAll('.hero-slide')],dots=[...document.querySelectorAll('.hero-dot')],prev=document.querySelector('.hero-prev'),next=document.querySelector('.hero-next');if(!hero||!slides.length)return;let index=0,timer;function show(i){index=(i+slides.length)%slides.length;slides.forEach((s,n)=>{s.classList.toggle('active',n===index);s.setAttribute('aria-hidden',n===index?'false':'true')});dots.forEach((d,n)=>{d.classList.toggle('active',n===index);d.setAttribute('aria-pressed',n===index?'true':'false')})}function restart(){clearInterval(timer);if(!document.hidden)timer=setInterval(()=>show(index+1),4000)}prev?.addEventListener('click',()=>{show(index-1);restart()});next?.addEventListener('click',()=>{show(index+1);restart()});dots.forEach((d,n)=>d.addEventListener('click',()=>{show(n);restart()}));document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInterval(timer);else restart()});restart()})();const chickenCart=new Map();
+const cartStorageKey='ics-shopping-cart-v1';
+const cartCurrency=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',minimumFractionDigits:2,maximumFractionDigits:2});
+const cartPanel=document.getElementById('chicken-cart');
+const cartItems=document.getElementById('chicken-cart-items');
+const cartCount=document.getElementById('chicken-cart-count');
+const cartTotal=document.getElementById('chicken-cart-total');
+const navCart=document.getElementById('nav-cart');
+const navCartCount=document.getElementById('nav-cart-count');
+const cartBackdrop=document.getElementById('chicken-cart-backdrop');
+const cartEmpty=document.getElementById('chicken-cart-empty');
+let cartOpen=false;
+function formatCartMoney(cents){return cartCurrency.format(cents/100)}
+function formatCartQuantity(value,unit='kg'){
+ if(unit==='paya')return value+' '+(value===1?'paya':'payas');
+ const grams=Number.isInteger(value)?value:Math.round(value*1000);
+ return grams<1000?grams+' g':(grams%1000===0?(grams/1000):(grams/1000).toFixed(2).replace(/0+$/,'').replace(/\.$/,''))+' kg';
+}
+function kgCents(price,grams){return Math.round(price*grams/10)}
+function payaCents(price,count){return Math.round(price*count*100)}
+function setCartOpen(open){cartOpen=open;cartPanel.hidden=!open;cartBackdrop.hidden=!open;navCart.setAttribute('aria-expanded',String(open));document.body.classList.toggle('cart-open',open);if(open){positionCartPanel();document.getElementById('chicken-cart-close').focus()}}
+function positionCartPanel(){const header=document.querySelector('.header');if(header){const top=Math.max(8,header.getBoundingClientRect().bottom+10);cartPanel.style.top=top+'px';cartPanel.style.maxHeight=Math.max(180,window.innerHeight-top-10)+'px'}}
+window.addEventListener('resize',()=>{if(cartOpen)positionCartPanel()});
+function makeWeightOptions(select){
+ const prior=Number(select.value)||Number(select.options[0]?.value)||0.5;
+ const grams=Math.min(10000,Math.max(250,Math.round(prior*4)*250));
+ select.replaceChildren();
+ for(let weight=250;weight<=10000;weight+=250){const option=document.createElement('option');option.value=String(weight/1000);option.textContent=formatCartQuantity(weight);option.selected=weight===grams;select.append(option)}
+}
+function makePayaOptions(select){
+ const prior=Number(select.value)||4;
+ const count=Math.min(40,Math.max(4,Math.round(prior/4)*4));
+ select.replaceChildren();
+ for(let payas=4;payas<=40;payas+=4){const option=document.createElement('option');option.value=String(payas);option.textContent=formatCartQuantity(payas,'paya');option.selected=payas===count;select.append(option)}
+}
+document.querySelectorAll('.cart-quantity').forEach(select=>{if(select.dataset.unit==='paya')makePayaOptions(select);else makeWeightOptions(select)});
+const catalog=new Map();
+document.querySelectorAll('.add-to-cart[data-product][data-price]').forEach(button=>{
+ const card=button.closest('.product-card');const select=card?.querySelector('.cart-quantity');
+ if(!card||!select)return;
+ const name=button.dataset.product;const unit=select.dataset.unit==='paya'?'paya':'kg';
+ const row=card.querySelector('.cart-add-row');const stepper=document.createElement('div');stepper.className='cart-stepper';stepper.hidden=true;stepper.dataset.product=name;
+ const minus=document.createElement('button');minus.type='button';minus.textContent='−';minus.className='cart-stepper-minus';minus.dataset.cartDelta='-1';minus.dataset.product=name;minus.setAttribute('aria-label','Decrease '+name+' quantity');
+ const output=document.createElement('output');output.setAttribute('aria-live','polite');
+ const plus=document.createElement('button');plus.type='button';plus.textContent='+';plus.className='cart-stepper-plus';plus.dataset.cartDelta='1';plus.dataset.product=name;plus.setAttribute('aria-label','Increase '+name+' quantity');
+ stepper.append(minus,output,plus);row.append(stepper);
+ const feedback=document.createElement('span');feedback.className='cart-added-feedback';feedback.setAttribute('aria-live','polite');row.append(feedback);
+ const record={name,price:Number(button.dataset.price),unit,card,select,button,row,stepper,feedback};catalog.set(name,record);
+});
+try{
+ const saved=JSON.parse(localStorage.getItem(cartStorageKey)||'[]');
+ if(Array.isArray(saved))saved.forEach(item=>{
+  const product=item&&catalog.get(item.name);if(!product||!Number.isFinite(Number(item.qty))||Number(item.qty)<=0)return;
+  if(product.unit==='paya'){
+   const qtyPaya=Math.min(40,Math.max(4,Math.round(Number(item.qty)/4)*4));chickenCart.set(product.name,{name:product.name,price:product.price,unit:'paya',qtyPaya});
+  }else{
+   const qtyGrams=Math.min(10000,Math.max(250,Math.round(Number(item.qty)*4)*250));chickenCart.set(product.name,{name:product.name,price:product.price,unit:'kg',qtyGrams});
+  }
+ });
+}catch{}
+function makeStepper(item,variant){
+ const stepper=document.createElement('div');stepper.className='cart-stepper'+(variant==='card'?' cart-stepper-card':' cart-stepper-modal');stepper.dataset.product=item.name;
+ const minus=document.createElement('button');minus.type='button';minus.textContent='−';minus.className='cart-stepper-minus';minus.dataset.cartDelta='-1';minus.dataset.product=item.name;minus.setAttribute('aria-label','Decrease '+item.name+' quantity');
+ const output=document.createElement('output');output.setAttribute('aria-live','polite');
+ const plus=document.createElement('button');plus.type='button';plus.textContent='+';plus.className='cart-stepper-plus';plus.dataset.cartDelta='1';plus.dataset.product=item.name;plus.setAttribute('aria-label','Increase '+item.name+' quantity');
+ const qty=item.unit==='paya'?item.qtyPaya:item.qtyGrams;
+ const quantity=item.unit==='paya'?formatCartQuantity(qty,'paya'):formatCartQuantity(qty);
+ output.textContent=quantity;
+ if(variant==='card'){
+  const subtotal=document.createElement('small');subtotal.className='cart-stepper-subtotal';subtotal.textContent=formatCartMoney(item.unit==='paya'?payaCents(item.price,qty):kgCents(item.price,qty));output.append(subtotal);
+ }
+ const maxReached=item.unit==='paya'?qty>=40:qty>=10000;plus.disabled=maxReached;
+ if(maxReached){plus.title='Maximum quantity reached';plus.setAttribute('aria-label','Maximum quantity reached for '+item.name)}
+ stepper.append(minus,output,plus);return stepper;
+}
+function persistCart(){
+ const rows=[...chickenCart.values()].map(item=>({name:item.name,price:item.price,unit:item.unit,qty:item.unit==='paya'?item.qtyPaya:item.qtyGrams/1000}));
+ try{localStorage.setItem(cartStorageKey,JSON.stringify(rows))}catch{}
+}
+function renderChickenCart(addedName=''){
+ const rows=[...chickenCart.values()];let totalCents=0;
+ for(const product of catalog.values()){
+  const item=chickenCart.get(product.name);const {row,select,button,stepper,feedback}=product;
+  if(item){const qty=item.unit==='paya'?item.qtyPaya:item.qtyGrams;select.value=String(item.unit==='paya'?qty:qty/1000);row.classList.add('is-in-cart');stepper.hidden=false;const cardStepper=makeStepper(item,'card');stepper.replaceWith(cardStepper);product.stepper=cardStepper;button.hidden=true;product.feedback.textContent=product.name+' added to cart. '+formatCartQuantity(qty,item.unit);if(product.name===addedName){cardStepper.classList.add('is-added');window.setTimeout(()=>cardStepper.classList.remove('is-added'),500)}}
+  else{row.classList.remove('is-in-cart');stepper.hidden=true;button.hidden=false;feedback.textContent=''}
+ }
+ cartItems.replaceChildren();
+ for(const item of rows){
+  const qty=item.unit==='paya'?item.qtyPaya:item.qtyGrams;const subtotal=item.unit==='paya'?payaCents(item.price,qty):kgCents(item.price,qty);totalCents+=subtotal;
+  const row=document.createElement('div');row.className='cart-item';row.dataset.product=item.name;
+  const label=document.createElement('span');label.textContent=item.name;
+  const amount=document.createElement('strong');amount.textContent=formatCartMoney(subtotal);
+  row.append(label,makeStepper(item,'modal'),amount);cartItems.append(row);
+ }
+ cartCount.textContent=rows.length+' '+(rows.length===1?'item':'items');navCartCount.textContent=String(rows.length);cartTotal.textContent=formatCartMoney(totalCents);cartEmpty.hidden=rows.length>0;document.getElementById('chicken-cart-checkout').disabled=rows.length===0;document.getElementById('chicken-cart-clear').disabled=rows.length===0;
+ persistCart();
+}
+navCart.addEventListener('click',()=>setCartOpen(!cartOpen));
+document.getElementById('chicken-cart-close').addEventListener('click',()=>setCartOpen(false));
+cartBackdrop.addEventListener('click',()=>setCartOpen(false));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&cartOpen){setCartOpen(false);navCart.focus()}});
+document.querySelectorAll('.add-to-cart').forEach(button=>button.addEventListener('click',()=>{
+ const card=button.closest('.product-card');const name=button.dataset.product;const product=catalog.get(name);if(!product)return;
+ const selected=Number(card.querySelector('.cart-quantity').value);const item=product.unit==='paya'?{name,price:product.price,unit:'paya',qtyPaya:Math.min(40,Math.max(4,Math.round(selected/4)*4))}:{name,price:product.price,unit:'kg',qtyGrams:Math.min(10000,Math.max(250,Math.round(selected*4)*250))};
+ chickenCart.set(name,item);renderChickenCart(name);
+}));
+document.addEventListener('click',event=>{
+ const control=event.target.closest('[data-cart-delta][data-product]');if(!control)return;
+ const item=chickenCart.get(control.dataset.product);if(!item)return;
+ const direction=Number(control.dataset.cartDelta);if(item.unit==='paya'){
+  const next=item.qtyPaya+direction*4;if(next<4)chickenCart.delete(item.name);else item.qtyPaya=Math.min(40,next);
+ }else{
+  const next=item.qtyGrams+direction*250;if(next<250)chickenCart.delete(item.name);else item.qtyGrams=Math.min(10000,next);
+ }
+ renderChickenCart();
+});
+document.querySelectorAll('.kabab-ask-price').forEach(link=>link.addEventListener('click',()=>{const card=link.closest('.product-card');const qty=Number(card.querySelector('.cart-quantity').value);const weight=formatCartQuantity(Math.round(qty*1000));link.href='https://wa.me/918512875859?text='+encodeURIComponent('Hello, please share today\'s price and availability for '+link.dataset.product+' ('+weight+').')}));
+document.getElementById('chicken-cart-clear').addEventListener('click',()=>{chickenCart.clear();renderChickenCart()});
+document.getElementById('chicken-cart-checkout').addEventListener('click',()=>{
+ if(!chickenCart.size)return;
+ const rows=[...chickenCart.values()];const totalCents=rows.reduce((sum,item)=>sum+(item.unit==='paya'?payaCents(item.price,item.qtyPaya):kgCents(item.price,item.qtyGrams)),0);
+ const lines=rows.map(item=>{const qty=item.unit==='paya'?item.qtyPaya:item.qtyGrams;const quantity=formatCartQuantity(qty,item.unit);const subtotal=item.unit==='paya'?payaCents(item.price,qty):kgCents(item.price,qty);const unitPrice=item.unit==='paya'?formatCartMoney(Math.round(item.price*100))+' per paya':formatCartMoney(Math.round(item.price*100))+' per kg';return '- '+item.name+' — '+quantity+' @ '+unitPrice+' = '+formatCartMoney(subtotal)});
+ const delivery=totalCents>=50000?'Free delivery applies (orders ₹500 and above).':'Free delivery applies to orders ₹500 and above; this order is below the threshold.';
+ const message='Hello, I would like to order from Indian Chicken Shop:\n'+lines.join('\n')+'\nGrand total: '+formatCartMoney(totalCents)+'\n'+delivery+' Please confirm availability and delivery.';
+ window.location.href='https://wa.me/918512875859?text='+encodeURIComponent(message);
+});
+renderChickenCart();
+const categoryViews={chicken:{label:'Chicken',section:'shop'},kabab:{label:'Ready-to-Cook Kabab',section:'kabab'},fish:{label:'Fish & Seafood',section:'fish-menu'},mutton:{label:'Mutton',section:'mutton-section'}};
 const searchForm=document.getElementById('header-search-form');
 searchForm.addEventListener('submit',event=>{
  event.preventDefault();
