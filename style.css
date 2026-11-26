@@ -634,3 +634,8 @@ body.category-page-mode main>section:not(#category-page-title){scroll-margin-top
  .header .nav>nav[aria-label="Main navigation"]{gap:18px}
  .header .nav>nav[aria-label="Main navigation"] a{font-size:.7rem}
 }
+/* Nov 2026: whole banner taps through to WhatsApp; arrows kept subtle */
+.hero-slide .banner-order-link{left:0!important;top:0!important;width:100%!important;height:100%!important;border-radius:0;cursor:pointer}
+.hero-arrow{width:30px!important;height:30px!important;border:0!important;border-radius:50%!important;background:#ffffff59!important;color:#173e31b3!important;font-size:1.2rem!important;box-shadow:none!important;opacity:.55;transition:opacity .2s,background .2s}
+.hero-arrow:hover,.hero-arrow:focus-visible{opacity:1;background:#ffffffcc!important}
+@media(max-width:760px){.hero-arrow{width:24px!important;height:24px!important;font-size:1rem!important;opacity:.45}.hero-prev{left:4px!important}.hero-next{right:4px!important}}
