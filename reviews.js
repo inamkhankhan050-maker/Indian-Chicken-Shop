@@ -24,6 +24,36 @@
     parent.appendChild(node);
     return node;
   }
+  const params = new URLSearchParams(location.search);
+  if (params.has('admin')) {
+    const pin = prompt('Enter shop admin PIN to manage reviews');
+    if (pin) sessionStorage.setItem('icsReviewPin', pin.trim());
+  }
+  function adminPin() { return sessionStorage.getItem('icsReviewPin') || ''; }
+  async function deleteReview(id, button) {
+    if (!confirm('Delete this review permanently?')) return;
+    button.disabled = true;
+    button.textContent = 'Deleting…';
+    try {
+      const response = await fetch(base + '/rest/v1/rpc/delete_review', {
+        method: 'POST',
+        headers: { ...headers, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ review_id: id, admin_pin: adminPin() })
+      });
+      if (!response.ok) {
+        sessionStorage.removeItem('icsReviewPin');
+        alert('Could not delete. The admin PIN may be wrong. Open the page with ?admin again.');
+        button.disabled = false;
+        button.textContent = 'Delete';
+        return;
+      }
+      await loadReviews();
+    } catch (_) {
+      alert('Could not delete right now. Please try again.');
+      button.disabled = false;
+      button.textContent = 'Delete';
+    }
+  }
   async function loadReviews() {
     if (!configured) {
       emptyMessage('Customer reviews will appear here after the shop connects its review database.');
@@ -56,6 +86,14 @@
         addText(card, 'p', '', item.message);
         const date = item.created_at ? new Date(item.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
         addText(card, 'time', '', date);
+        if (adminPin() && item.id != null) {
+          const del = document.createElement('button');
+          del.type = 'button';
+          del.className = 'review-delete';
+          del.textContent = 'Delete';
+          del.addEventListener('click', () => deleteReview(item.id, del));
+          card.appendChild(del);
+        }
         list.appendChild(card);
       });
     } catch (_) {
@@ -90,7 +128,7 @@
         });
         if (!response.ok) throw new Error('Review submission failed');
         form.reset();
-        status.textContent = 'JazakAllah khair! Your review is saved and will appear after the shop approves it.';
+        status.textContent = 'JazakAllah khair! Your review has been posted.';
         await loadReviews();
       } catch (_) {
         status.textContent = 'Sorry, your review could not be submitted. Please try again later.';

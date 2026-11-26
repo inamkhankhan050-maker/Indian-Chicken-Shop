@@ -644,3 +644,5 @@ body.category-page-mode main>section:not(#category-page-title){scroll-margin-top
 .brand-mark.brand-logo:after{display:none!important}
 .brand-mark.brand-logo img{width:100%;height:100%;display:block;object-fit:cover;border-radius:50%}
 @media(max-width:760px){.brand-mark.brand-logo{width:46px!important;height:46px!important;flex-basis:46px!important}}
+.review-delete{margin-top:10px;border:1px solid #e3b3aa;background:#fff5f3;color:#b3261e;border-radius:8px;padding:6px 12px;font:800 .7rem 'DM Sans',Arial,sans-serif;cursor:pointer}
+.review-delete:disabled{opacity:.6;cursor:default}
